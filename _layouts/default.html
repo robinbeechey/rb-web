@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+{% include header.html %}
+
+<div class="page-content">
+    <div class="wrapper">
+        {{ content }}
+    </div>
+</div>
+
+<main>
+    <!--<section id="home" data-type="background" data-speed="10" class="pages">-->
+    <!--<article>I am absolute positioned</article>-->
+    <!--</section>-->
+
+    <!--<div id="about" data-type="background" data-speed="10" class="pages">-->
+    <!--<article>Simple Parallax Scroll</article>-->
+    <!--</div>-->
+    <div class="parallax">
+        <div class="parallax-layer-0">
+            <img src="../img/windows.jpeg" class="backdrop"/>
+        </div>
+        <div class="parallax-layer-1">
+            <img src="../img/build2.png" class="building"/>
+        </div>
+        <div class="parallax-layer-2">
+            <img src="../img/roof.png" class="roof"/>
+        </div>
+        <div class="parallax-layer-3">
+            <img src="../img/house.png" class="house"/>
+        </div>
+        <!--<div class="parallax-cover"></div>-->
+    </div>
+
+</main>
+
+<!--{% include footer.html %}-->
+
+</body>
+
+</html>
