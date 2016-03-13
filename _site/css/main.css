@@ -205,17 +205,17 @@ pre {
     height: 100vh; }
     .drape-wrapper .drape.left {
       right: 0;
-      transition: right 4s ease;
-      background-color: #7299B6; }
+      transition: right 3s ease;
+      background-color: #C4D4E1; }
     .drape-wrapper .drape.right {
       left: 0;
-      transition: left 4s ease;
-      background-color: #FFEDE9; }
+      transition: left 3s ease;
+      background-color: #C4D4E1; }
       .drape-wrapper .drape.right .logo-button {
         cursor: pointer;
         position: absolute;
         top: 25%;
-        left: -54px; }
+        left: -65px; }
         .drape-wrapper .drape.right .logo-button img {
           max-width: 150px; }
 
