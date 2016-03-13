@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="def092b8-5bbc-4b94-8c98-0e4f683072d9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/scripts.html" afterPath="$PROJECT_DIR$/_includes/scripts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/index.html" afterPath="$PROJECT_DIR$/_site/blog/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/jekyll/update/2016/03/09/new-blog.html" afterPath="$PROJECT_DIR$/_site/jekyll/update/2016/03/09/new-blog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/jekyll/update/2016/03/10/welcome-to-jekyll.html" afterPath="$PROJECT_DIR$/_site/jekyll/update/2016/03/10/welcome-to-jekyll.html" />
-    </list>
+    <list default="true" id="def092b8-5bbc-4b94-8c98-0e4f683072d9" name="Default" comment="" />
     <ignored path="rb-web.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
