@@ -1,58 +1,21 @@
 //parallax
 
-#home {
-  background: url("../img/waterfall.png") 50% 0 repeat fixed;
-  min-height: 1000px;
-  height: 1000px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1920px;
-  position: relative;
-}
-
-#home article {
-  height: 458px;
-  position: absolute;
-  text-align: center;
-  top: 150px;
-  width: 100%;
-}
-
-#about {
-  background-image: url("../img/build2.png");
-  min-height: 1000px;
-  //background-color: transparent;
-  height: 2000px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1920px;
-  position: relative;
-}
-
-#about article {
-  height: 458px;
-  position: absolute;
-  text-align: center;
-  top: 150px;
-  width: 100%;
-}
-
-html,
-body {
-  background-color: #FEDCC8;
-}
+//* {
+//  border:dashed 1px black;
+//}
 
 .parallax {
+  background-image: url("../img/brickwall_@2X.png");
   perspective: 100px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
   top: 0;
-  //left: 50%;
+  left: 50%;
   right: 0;
   bottom: 0;
-  //margin-left: -1500px;
+  margin-left: -(2315/2)#{px};
 }
 
 .parallax-layer {
@@ -66,77 +29,76 @@ body {
     display: block;
     position: absolute;
     bottom: 0;
-
-    //&.img-1{
-    //  height: 100px;
-    //  width: 100px;
-    //}
-    //&.img-2{
-    //  height: 100px;
-    //  width: 100px;
-    //}
   }
 }
 
-.wrapper{
-  z-index: 2;
-}
-
-.backdrop {
-  //height: 1000px;
-  //width: 1000px;
-  width: 280vh;
-}
-
-.building {
-  //height: 1000px;
-  //width: 1000px;
-  width: 280vh;
-}
-
-.roof{
-  width: 280vh;
-  z-index: 2;
-}
-
-.house{
-  width: 280vh;
-}
-
 .parallax-cover {
-  background: #2D112B;
+  background: #1C4055;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   height: 2000px;
   z-index: 2;
+  h1 {
+    position: relative;
+    color: gray;
+    z-index: 10;
+  }
 }
 
-//.parallax-layer-3{
-//   transform: translateZ(-100 * 2#{px}) scale(2 + 1);
-//}
+$parallax__layers: 5;
 
-$parallax__layers: 3;
+@for $i from 0 through $parallax__layers {
+  $x: ($parallax__layers - $i) / 2;
+  .parallax-layer-#{$i} {
+    transform: translateZ(-100 * $x#{px}) scale($x + 1);
+  }
+}
 
-//@for $i from 0 through $parallax__layers {
-//  $x: ($parallax__layers - $i) / 2;
-//  .parallax-layer-#{$i} {
-//    transform: translateZ(-100 * $x#{px}) scale($x + 1);
-//  }
-//}
+//drapes
 
-.parallax-layer-0 {
-  transform: translateZ(-150px) scale(2.5); }
+.drape-wrapper {
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  button {
+    z-index: 6;
+  }
+  .drape {
+    height: 100vh;
 
-.parallax-layer-1 {
-  transform: translateZ(-100px) scale(2); }
+    &.left {
+      right:0;
+      transition: right 4s ease;
+      background-color: #7299B6;
+    }
+    &.right {
+      left:0;
+      transition: left 4s ease;
+      background-color: #FFEDE9;
+      .logo-button {
+        cursor:pointer;
+        position: absolute;
+        //right: 0;
+        top:25%;
+        left: -54px;
+        img{
+          max-width:150px;
+        }
+      }
+    }
+  }
+}
 
-.parallax-layer-2 {
-  transform: translateZ(-50px) scale(1.5); }
-
-.parallax-layer-3 {
-  transform: translateZ(0px) scale(1); }
+.slide{
+  &.to-right{
+    left: 1000px !important;
+  }
+  &.to-left{
+    right: 1000px !important;
+  }
+}
 
 /**
  * Site header

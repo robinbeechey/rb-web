@@ -3,44 +3,26 @@
 
 {% include head.html %}
 
-<body>
+    <body>
 
-{% include header.html %}
-
-<div class="page-content">
-    <div class="wrapper">
-        {{ content }}
-    </div>
-</div>
-
-<main>
-    <!--<section id="home" data-type="background" data-speed="10" class="pages">-->
-    <!--<article>I am absolute positioned</article>-->
-    <!--</section>-->
-
-    <!--<div id="about" data-type="background" data-speed="10" class="pages">-->
-    <!--<article>Simple Parallax Scroll</article>-->
-    <!--</div>-->
-    <div class="parallax">
-        <div class="parallax-layer-0">
-            <img src="../img/windows.jpeg" class="backdrop"/>
+    <!--{% include header.html %}-->
+    <div class="drape-wrapper row">
+        <div class="drape left col-xs-6"></div>
+        <div class="drape right col-xs-6">
+            <div id="drape-button" class="logo-button">
+                <img class="img-responsive" src="../img/rb_logo1.png"/>
+            </div>
         </div>
-        <div class="parallax-layer-1">
-            <img src="../img/build2.png" class="building"/>
-        </div>
-        <div class="parallax-layer-2">
-            <img src="../img/roof.png" class="roof"/>
-        </div>
-        <div class="parallax-layer-3">
-            <img src="../img/house.png" class="house"/>
-        </div>
-        <!--<div class="parallax-cover"></div>-->
     </div>
 
-</main>
+    <div class="page-content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
+    </div>
 
-<!--{% include footer.html %}-->
+    <!--{% include footer.html %}-->
 
-</body>
+    </body>
 
 </html>

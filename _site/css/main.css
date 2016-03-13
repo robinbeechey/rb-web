@@ -33,10 +33,6 @@ ul, ol, dl, figure,
 /**
  * Images
  */
-img {
-  max-width: 100%;
-  vertical-align: middle; }
-
 /**
  * Figures
  */
@@ -144,51 +140,18 @@ pre {
   .icon > svg path {
     fill: #828282; }
 
-#home {
-  background: url("../img/waterfall.png") 50% 0 repeat fixed;
-  min-height: 1000px;
-  height: 1000px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1920px;
-  position: relative; }
-
-#home article {
-  height: 458px;
-  position: absolute;
-  text-align: center;
-  top: 150px;
-  width: 100%; }
-
-#about {
-  background-image: url("../img/build2.png");
-  min-height: 1000px;
-  height: 2000px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1920px;
-  position: relative; }
-
-#about article {
-  height: 458px;
-  position: absolute;
-  text-align: center;
-  top: 150px;
-  width: 100%; }
-
-html,
-body {
-  background-color: #FEDCC8; }
-
 .parallax {
+  background-image: url("../img/brickwall_@2X.png");
   perspective: 100px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
   top: 0;
+  left: 50%;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+  margin-left: -1157.5px; }
 
 .parallax-layer {
   position: absolute;
@@ -201,42 +164,65 @@ body {
     position: absolute;
     bottom: 0; }
 
-.wrapper {
-  z-index: 2; }
-
-.backdrop {
-  width: 280vh; }
-
-.building {
-  width: 280vh; }
-
-.roof {
-  width: 280vh;
-  z-index: 2; }
-
-.house {
-  width: 280vh; }
-
 .parallax-cover {
-  background: #2D112B;
+  background: #1C4055;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   height: 2000px;
   z-index: 2; }
+  .parallax-cover h1 {
+    position: relative;
+    color: gray;
+    z-index: 10; }
 
 .parallax-layer-0 {
-  transform: translateZ(-150px) scale(2.5); }
+  transform: translateZ(-250px) scale(3.5); }
 
 .parallax-layer-1 {
-  transform: translateZ(-100px) scale(2); }
+  transform: translateZ(-200px) scale(3); }
 
 .parallax-layer-2 {
-  transform: translateZ(-50px) scale(1.5); }
+  transform: translateZ(-150px) scale(2.5); }
 
 .parallax-layer-3 {
+  transform: translateZ(-100px) scale(2); }
+
+.parallax-layer-4 {
+  transform: translateZ(-50px) scale(1.5); }
+
+.parallax-layer-5 {
   transform: translateZ(0px) scale(1); }
+
+.drape-wrapper {
+  z-index: 5;
+  position: fixed;
+  width: 100%; }
+  .drape-wrapper button {
+    z-index: 6; }
+  .drape-wrapper .drape {
+    height: 100vh; }
+    .drape-wrapper .drape.left {
+      right: 0;
+      transition: right 4s ease;
+      background-color: #7299B6; }
+    .drape-wrapper .drape.right {
+      left: 0;
+      transition: left 4s ease;
+      background-color: #FFEDE9; }
+      .drape-wrapper .drape.right .logo-button {
+        cursor: pointer;
+        position: absolute;
+        top: 25%;
+        left: -54px; }
+        .drape-wrapper .drape.right .logo-button img {
+          max-width: 150px; }
+
+.slide.to-right {
+  left: 1000px !important; }
+.slide.to-left {
+  right: 1000px !important; }
 
 /**
  * Site header
