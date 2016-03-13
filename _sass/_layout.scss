@@ -70,19 +70,19 @@ $parallax__layers: 5;
 
     &.left {
       right:0;
-      transition: right 4s ease;
-      background-color: #7299B6;
+      transition: right 3s ease;
+      background-color: #C4D4E1;
     }
     &.right {
       left:0;
-      transition: left 4s ease;
-      background-color: #FFEDE9;
+      transition: left 3s ease;
+      background-color: #C4D4E1;
       .logo-button {
         cursor:pointer;
         position: absolute;
         //right: 0;
         top:25%;
-        left: -54px;
+        left: -65px;
         img{
           max-width:150px;
         }
