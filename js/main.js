@@ -34,18 +34,6 @@ function checkCookie() {
 checkCookie();
 
 
-// on button press set cookie
-
-$('#drape-button').on('click', function () {
-    $('.left').addClass('slide to-left');
-    $('.right').addClass('slide to-right');
-    setCookie('clicked', 'true', 5);
-    setTimeout(function () {
-        $('.drape-wrapper').remove();
-    }, 2000);
-});
-
-
 //tabs
 
 
@@ -57,22 +45,12 @@ var contentDivs = new Array();
 
 function init() {
 
-
-
     //checkCookie();
-
     imagePreview();
     checkWindowSize();
-
     initiateParallax();
-
-    //initMasonry();
-
     initTabs();
-
-
     initHoverRating();
-
 
 }
 
@@ -212,6 +190,7 @@ function initiateParallax() {
 
 
 function dropDrape() {
+    $('.loader').fadeOut();
     $('.left').addClass('slide to-left');
     $('.right').addClass('slide to-right');
     $('.white-fade').fadeOut(2000, "linear");
@@ -240,7 +219,7 @@ var interval = setInterval(function () {
     $('html').css({'overflow': 'hidden'});
     if (document.readyState === 'complete') {
         setTimeout(function () {
-            console.log('complete');
+            //console.log('complete');
             dropDrape();
             $('html').css({'overflow': 'auto'});
             clearInterval(interval);
@@ -248,7 +227,7 @@ var interval = setInterval(function () {
         }, 2000);
 
     }
-    console.log('not complete');
+    //console.log('not complete');
 }, 100);
 
 
