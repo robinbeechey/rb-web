@@ -4,98 +4,308 @@
 //  border:dashed 1px black;
 //}
 
-.parallax {
-  background-image: url("../img/brickwall_@2X.png");
-  perspective: 100px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 0;
-  bottom: 0;
-  margin-left: -(2315/2)#{px};
+html {
+  overflow: auto;
 }
 
-.parallax-layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+#home-page {
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
 
-  img {
-    display: block;
-    position: absolute;
-    bottom: 0;
+#parallax {
+  display: block;
+}
+
+.keyart, .keyart_layer {
+  height: 1000px;
+}
+
+.keyart {
+  position: relative;
+  z-index: 10;
+}
+
+.keyart_layer {
+  position: absolute;
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  &.parallax {
+    position: fixed;
   }
 }
 
-.parallax-cover {
-  background: #1C4055;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 2000px;
-  z-index: 2;
-  h1 {
-    position: relative;
-    color: gray;
-    z-index: 10;
-  }
+#main-contain {
+  position: relative;
+  z-index: 98;
+  background-color: #fff;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
-$parallax__layers: 5;
+#portfolio, #about-me {
+  max-width: 900px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 99;
+  position: relative;
+  background-color: white;
+}
+
+#about-me {
+
+}
+
+$parallax__layers: 8;
 
 @for $i from 0 through $parallax__layers {
   $x: ($parallax__layers - $i) / 2;
-  .parallax-layer-#{$i} {
-    transform: translateZ(-100 * $x#{px}) scale($x + 1);
+  #keyart-#{$i} {
+    //background-image: url('../img/v2_layer_#{$i}.png');
+    //background-image: url('../img/parallax#{$i}.png');
+    background-image: url('../img/v3-parallax#{$i}.png');
+  }
+}
+
+//tab content
+
+#tabs {
+  list-style-type: none;
+
+  div {
+    display: inline;
+    background-color: $v1-color-l-teal;
+    padding-right: 0;
+    padding-left: 0;
+    transition: all .25s ease;
+    //&:hover {
+    //  background-color: $v1-color-m-teal;
+    //}
+    //&.selected {
+    //  background-color: $v1-color-m-teal;
+    //  border: none;
+    //}
+    a {
+      font-size: 3vmin;
+      display: block;
+      text-align: center;
+      color: $grey-color;
+      margin: auto;
+      width: 100%;
+      text-decoration: none;
+      line-height: 4;
+      transition: all .25s ease;
+      background-color: $v1-color-l-teal;
+      &:hover {
+        color: $grey-color-dark;
+        background-color: $v1-color-m-teal;
+      }
+      &.selected {
+        color: $grey-color-dark;
+        font-weight: bold;
+        background-color: $v1-color-m-teal;
+      }
+    }
+  }
+}
+
+.selected {
+  background-color: $v1-color-m-teal;
+}
+
+.tabContent {
+
+  .graphics{
+    img{
+      border: solid 10px red;
+    }
+  }
+
+  .project {
+    box-shadow: 0px 1px 2px #888888;
+
+    .image-cover {
+      position: relative;
+      background-color: $color-light-grey;
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      iframe {
+        width: 100%;
+        min-height: 250px;
+      }
+      span {
+        position: absolute;
+        display: none;
+
+      }
+      &:hover {
+        span {
+          display: block;
+          top: 48%;
+          left: 46%;
+          font-size: x-large;
+        }
+      }
+      //&:hover {
+      //  opacity: .7;
+      //  cursor: pointer;
+      //  span {
+      //    display: block;
+      //    top: 50%;
+      //    left: 46%;
+      //    font-size: x-large;
+      //  }
+      //}
+    }
+    .info {
+      padding: 5px;
+      background-color: white;
+      ul {
+        list-style-type: none;
+        margin-left: 18px;
+        li {
+          text-indent: -8px;
+        }
+      }
+      .description {
+        margin-top: 14px;
+        margin-bottom: 11px;
+      }
+      p {
+        font-size: 2vmin;
+        margin-bottom: 6px;
+      }
+      a {
+        text-decoration: none;
+      }
+      .title {
+        margin-top: 10px;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+//me
+
+.my-info {
+  .me, .skills {
+    height: 60vh;
+    img {
+      display: block;
+      height: auto;
+    }
+  }
+  .me {
+    background-color: $v1-color-l-teal;
+    img {
+      margin: auto;
+      max-width: 45%;
+    }
+  }
+  .skills {
+    background-color: $v1-color-m-teal;
+    > div > div {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    img {
+      width: 100%;
+    }
+
+  }
+}
+
+//preview image
+#preview {
+  background: rgba(82, 82, 82, 0.5);
+  padding: 5px;
+  position: fixed;
+  display: none;
+  color: #fff;
+  z-index: 113;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  img {
+    vertical-align: middle;
+    display: block;
+    margin-top: 10%;
+    position: absolute;
+    width: 100%;
+    z-index: 114;
   }
 }
 
 //drapes
 
 .drape-wrapper {
-  z-index: 5;
+  z-index: 102;
   position: fixed;
   width: 100%;
-  button {
-    z-index: 6;
-  }
+  top: 0;
+  left: 15px;
   .drape {
     height: 100vh;
-
     &.left {
-      right:0;
-      transition: right 3s ease;
-      background-color: #C4D4E1;
+      right: 0;
+      transition: right 4s ease;
+      background-color: #e0f1fe;
     }
     &.right {
-      left:0;
-      transition: left 3s ease;
-      background-color: #C4D4E1;
+      left: 0;
+      transition: left 4s ease;
+      background-color: #e0f1fe;
       .logo-button {
-        cursor:pointer;
         position: absolute;
-        //right: 0;
-        top:25%;
+        right: 0;
+        top: 25%;
         left: -65px;
-        img{
-          max-width:150px;
+        img {
+          max-width: 150px;
+        }
+        .loader {
+          width: 80px;
+          position: absolute;
+          left: 32px;
+          bottom: -20px;
         }
       }
     }
   }
 }
 
-.slide{
-  &.to-right{
+.white-fade {
+  height: 100vh;
+  background-color: white;
+  z-index: 101;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+//Masonry
+
+.post-box {
+  margin: 15px 0 15px 0;
+}
+
+.slide {
+  &.to-right {
     left: 1000px !important;
   }
-  &.to-left{
+  &.to-left {
     right: 1000px !important;
   }
 }
@@ -254,7 +464,24 @@ $parallax__layers: 5;
   }
 }
 
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .image-cover {
+    &:hover {
+      opacity: .7;
+      cursor: pointer;
+      span {
+        display: block;
+        top: 50%;
+        left: 46%;
+        font-size: x-large;
+      }
+    }
+  }
+}
+
 @include media-query($on-palm) {
+
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
@@ -307,6 +534,14 @@ $parallax__layers: 5;
   @include media-query($on-laptop) {
     font-size: 36px;
   }
+}
+
+.post-img {
+  width: 100%;
+}
+
+.project-img {
+  width: 300px;
 }
 
 .post-content {

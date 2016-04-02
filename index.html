@@ -1,36 +1,186 @@
 ---
-layout: default
+layout: front
+title: Robin Beechey
 ---
 
 <div class="home">
 
+    {% if page.title == 'Robin Beechey' %}
+    <!--<div class="drape-wrapper row">-->
+
+        <!--<div class="drape left col-xs-6"></div>-->
+        <!--<div class="drape right col-xs-6">-->
+            <!--<div id="drape-button" class="logo-button">-->
+                <!--<img class="img-responsive" src="../img/rb_logo1.png"/>-->
+                <!--<img class="loader" src="../img/ajax-loader.gif"/>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="white-fade"></div>-->
+    {% endif %}
 
 
-    <main>
-        <div class="parallax">
-            <div class="parallax-layer parallax-layer-0">
-                <img src="../img/layer_0_yellow.png" />
-            </div>
-            <div class="parallax-layer parallax-layer-1">
-                <img src="../img/layer_1_balconies.png" />
-            </div>
-            <div class="parallax-layer parallax-layer-2">
-                <img src="../img/layer_2_grunge.png" />
-            </div>
-            <div class="parallax-layer parallax-layer-3">
-                <img src="../img/layer_3_buildings.png" />
-            </div>
-            <div class="parallax-layer parallax-layer-4">
-                <img src="../img/layer_4_windows.png" />
-            </div>
-            <div class="parallax-layer parallax-layer-5">
-                <img src="../img/layer_5_building.png" />
-            </div>
-            <div class="parallax-cover">
-                <h1>Coming Soon...</h1>
-            </div>
+    <main id="home-page">
+        <div class="keyart" id="parallax">
+            <div class="keyart_layer parallax" data-speed="2" id="keyart-0"></div>
+            <div class="keyart_layer parallax" data-speed="5" id="keyart-1"></div>
+            <div class="keyart_layer parallax" data-speed="11" id="keyart-2"></div>
+            <div class="keyart_layer parallax" data-speed="16" id="keyart-3"></div>
+            <div class="keyart_layer parallax" data-speed="26" id="keyart-4"></div>
+            <div class="keyart_layer parallax" data-speed="36" id="keyart-5"></div>
+            <div class="keyart_layer parallax" data-speed="49" id="keyart-6"></div>
+            <div class="keyart_layer parallax" data-speed="69" id="keyart-7"></div>
+            <div class="keyart_layer" data-speed="100" id="keyart-8"></div>
         </div>
+        <div id="main-contain">
+            <div id="preview" class="row">
+                <div class="col-sm-offset-3 col-sm-6 ">
+                    <img src=""/>
+                </div>
 
+            </div>
+            <div id="about-me">
+                <div class="row my-info">
+                    <div class="col-xs-6 me">
+                        <img class="logo" src="../img/rb_logo1_svg.svg"/>
+                    </div>
+                    <div class="col-xs-6 skills">
+                        <div class="row">
+                            <p>web: js jquery ruby rails mysql sinatra git  yeoman sass css html django </p>
+                            <p>misc: illustrator photoshop premier pro final cut pro after effects </p>
+                            <div class="col-xs-3">
+                                <img class="icon" src="../img/angular.png"/>
+
+                                <div class="rating">3</div>
+                            </div>
+                            <div class="col-xs-3">
+                                <img src="../img/python.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="portfolio">
+
+                {% assign web = site.projects | where: "category", "web" %}
+                {% assign graphics = site.projects | where: "category", "graphics" %}
+                {% assign film = site.projects | where: "category", "film" %}
+                {% assign misc = site.projects | where: "category", "misc" %}
+
+                <div id="tabs" class="row">
+                    <div class="col-xs-3"><a href="#web">Web</a></div>
+                    <div class="col-xs-3"><a href="#graphics">Graphics</a></div>
+                    <div class="col-xs-3"><a href="#film">Film</a></div>
+                    <div class="col-xs-3"><a href="#misc">Misc</a></div>
+                </div>
+
+                <div class="tabContent row web" id="web">
+                    {% for project in web %}
+                    <div class="post-box col-xs-12 col-sm-4">
+                        <div class="project">
+                            <div class="image-cover">
+                                <img src="{{project.image}}"/>
+                                <span class="hidden-xs fa fa-picture-o"></span>
+                            </div>
+                            <div class="info">
+                                <p class="title">{{ project.title }}</p>
+                                <p class="description">{{project.description}}</p>
+                                <ul>
+                                    <li><p><a target="_blank" href="{{project.siteUrl}}"><span
+                                            class="fa fa-external-link"></span> {{project.siteUrl}}</a></p>
+                                    </li>
+                                    <li><p><span class="fa fa-wrench"></span> {{project.tools}}</p></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="tabContent row graphics" id="graphics">
+                    {% for project in graphics %}
+
+                    <div class="post-box col-xs-6 col-sm-4">
+                        <div class="project">
+                            <div class="image-cover">
+                                <img src="{{project.image}}"/>
+                                <span class="hidden-xs fa fa-picture-o"></span>
+                            </div>
+                            <div class="info">
+                                <p class="title">{{ project.title }}</p>
+                                <p class="description">{{project.description}}</p>
+                                <ul>
+                                    <!--<li><p><a target="_blank" href="{{project.siteUrl}}"><i-->
+                                    <!--class="fa fa-external-link"></i> {{project.siteUrl}}</a></p>-->
+                                    <!--</li>-->
+                                    <li><p><i class="fa fa-wrench"></i> {{project.tools}}</p></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {% endfor %}
+                </div>
+
+                <div class="tabContent row film" id="film">
+                    {% for project in film %}
+
+                    <div class="post-box col-xs-12 col-sm-6">
+                        <div class="project">
+                            <div class="image-cover">
+                                {{project.iframe}}
+                            </div>
+                            <div class="info">
+                                <p class="title">{{ project.title }}</p>
+                                <p class="description">{{project.description}}</p>
+                                <ul>
+                                    <li><p><a target="_blank" href="{{project.musicSource}}"><i
+                                            class="fa fa-external-link"></i> Music By
+                                        {{project.musicSource}}</a></p>
+                                    </li>
+                                    <li><p><i class="fa fa-wrench"></i> {{project.tools}}</p></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {% endfor %}
+                </div>
+
+                <div class="tabContent row misc" id="misc">
+                    {% for project in misc %}
+
+                    <div class="post-box col-xs-12 col-sm-4">
+                        <div class="project">
+                            <div class="image-cover">
+                                <img src="{{project.image}}"/>
+                                <span class="hidden-xs fa fa-picture-o"></span>
+                            </div>
+                            <div class="info">
+                                <p class="title">{{ project.title }}</p>
+                                <p class="description">{{project.description}}</p>
+                                <ul>
+                                    <!--<li><p><a target="_blank" href="{{project.siteUrl}}"><i-->
+                                    <!--class="fa fa-external-link"></i> {{project.siteUrl}}</a></p>-->
+                                    <!--</li>-->
+                                    <li><p><i class="fa fa-wrench"></i> {{project.tools}}</p></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+
+
+
+            </div>
+
+        </div>
     </main>
     <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
 
