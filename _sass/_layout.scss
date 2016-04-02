@@ -64,8 +64,6 @@ $parallax__layers: 8;
 @for $i from 0 through $parallax__layers {
   $x: ($parallax__layers - $i) / 2;
   #keyart-#{$i} {
-    //background-image: url('../img/v2_layer_#{$i}.png');
-    //background-image: url('../img/parallax#{$i}.png');
     background-image: url('http://rb-media.s3.amazonaws.com/v3-parallax#{$i}.png');
   }
 }
@@ -81,13 +79,6 @@ $parallax__layers: 8;
     padding-right: 0;
     padding-left: 0;
     transition: all .25s ease;
-    //&:hover {
-    //  background-color: $v1-color-m-teal;
-    //}
-    //&.selected {
-    //  background-color: $v1-color-m-teal;
-    //  border: none;
-    //}
     a {
       font-size: 3vmin;
       display: block;
@@ -118,8 +109,8 @@ $parallax__layers: 8;
 
 .tabContent {
 
-  .graphics{
-    img{
+  .graphics {
+    img {
       border: solid 10px red;
     }
   }
@@ -152,16 +143,6 @@ $parallax__layers: 8;
           font-size: x-large;
         }
       }
-      //&:hover {
-      //  opacity: .7;
-      //  cursor: pointer;
-      //  span {
-      //    display: block;
-      //    top: 50%;
-      //    left: 46%;
-      //    font-size: x-large;
-      //  }
-      //}
     }
     .info {
       padding: 5px;
@@ -200,8 +181,11 @@ $parallax__layers: 8;
 //me
 
 .my-info {
+  //display: table;
   .me, .skills {
-    height: 60vh;
+    //height: 60vh;
+    //display: table-cell;
+    //float: none;
     img {
       display: block;
       height: auto;
@@ -216,12 +200,44 @@ $parallax__layers: 8;
   }
   .skills {
     background-color: $v1-color-m-teal;
-    > div > div {
-      padding-left: 5px;
-      padding-right: 5px;
+    .category {
+      text-align: center;
+      margin-top: 20px;
     }
-    img {
-      width: 100%;
+    .icon-col {
+      padding: 5px;
+    }
+    .icon-cover {
+      position: relative;
+      .skill-info {
+        position: absolute;
+        //z-index: 50;
+        display: none;
+        width: 100%;
+        top: 0;
+        text-align: center;
+        left: 0;
+        p {
+          position: relative;
+        }
+        .name {
+          top: 20px;
+          font-size: 2vmin;
+        }
+        .rating {
+          bottom: 3px;
+          font-size: 3vmin;
+        }
+
+      }
+
+      img {
+        border: solid 6px #FFFFFF;
+        background: $v1-color-l-teal;
+        height: 16vmin;
+        margin: auto;
+      }
+
     }
 
   }
@@ -229,7 +245,7 @@ $parallax__layers: 8;
 
 //preview image
 #preview {
-  background: rgba(82, 82, 82, 0.5);
+  background: rgba(82, 82, 82, 0.8);
   padding: 5px;
   position: fixed;
   display: none;
@@ -239,12 +255,21 @@ $parallax__layers: 8;
   width: 100%;
   height: 100%;
   img {
-    vertical-align: middle;
-    display: block;
-    margin-top: 10%;
-    position: absolute;
-    width: 100%;
-    z-index: 114;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &.tall {
+      width: 58vh;
+    }
+    &.wide {
+      width: 90vh;
+    }
   }
 }
 
@@ -261,12 +286,12 @@ $parallax__layers: 8;
     &.left {
       right: 0;
       transition: right 4s ease;
-      background-color: #e0f1fe;
+      background-color: $v1-color-l-teal;
     }
     &.right {
       left: 0;
       transition: left 4s ease;
-      background-color: #e0f1fe;
+      background-color: $v1-color-l-teal;
       .logo-button {
         position: absolute;
         right: 0;
@@ -476,6 +501,26 @@ $parallax__layers: 8;
         left: 46%;
         font-size: x-large;
       }
+    }
+  }
+  .icon-cover {
+    &:hover {
+      img {
+        opacity: .4;
+      }
+      .skill-info {
+        display: block;
+      }
+    }
+  }
+  .my-info .skills .icon-cover img {
+    height: 9vmin;
+  }
+  .my-info {
+    display: table;
+    .me, .skills {
+      display: table-cell;
+      float: none;
     }
   }
 }

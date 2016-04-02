@@ -50,7 +50,8 @@ function init() {
     checkWindowSize();
     initiateParallax();
     initTabs();
-    initHoverRating();
+    //initHoverRating();
+
 
 }
 
@@ -144,11 +145,20 @@ function imagePreview() {
     var $window = $(window);
 
 
-
     $('.image-cover img').click(function () {
         if ($window.width() > 768) {
             var imgRef = this.getAttribute('src');
-            $preview.find('img').attr('src', imgRef);
+            var imgTag = $preview.find('img');
+            imgTag.attr('src', imgRef);
+
+            if (imgTag[0].width < imgTag[0].height) {
+                imgTag.addClass('tall');
+                imgTag.removeClass('wide');
+            } else {
+                imgTag.removeClass('tall');
+                imgTag.addClass('wide');
+            }
+
             $preview.show();
         }
 

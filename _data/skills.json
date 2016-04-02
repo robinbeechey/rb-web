@@ -1,0 +1,28 @@
+{"skills":[
+    {"name":"Angular", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/angular.png", "rating": 3.5},
+    {"name":"Python", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/python.png", "rating": 3},
+    {"name":"Illustrator", "type": "design", "src":"https://s3-us-west-2.amazonaws.com/rb-media/ai.png", "rating": 3},
+    {"name":"Photoshop", "type": "design", "src":"https://s3-us-west-2.amazonaws.com/rb-media/ps.png", "rating": 3},
+    {"name":"After Effects", "type": "design", "src":"https://s3-us-west-2.amazonaws.com/rb-media/after-effects.png", "rating": 2},
+    {"name":"Premier Pro", "type": "design", "src":"https://s3-us-west-2.amazonaws.com/rb-media/premier.png", "rating": 3},
+    {"name":"Django", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/django.png", "rating": 3},
+    {"name":"Firebase", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/firebase.png", "rating": 2},
+    {"name":"Sass", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/sass.png", "rating": 3},
+    {"name":"Git", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/git.png", "rating": 3},
+    {"name":"Stripe", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/stripe.png", "rating": 3},
+    {"name":"HTML5", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/html5.png", "rating": 3.5},
+    {"name":"CSS3", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/css3.png", "rating": 3},
+    {"name":"Ec2", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/ec2.png", "rating": 2},
+    {"name":"DynamoDB", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/dynamodb.png", "rating": 3},
+    {"name":"MySql", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/mysql.png", "rating": 3},
+    {"name":"SendGrid", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/sendgrid.png", "rating": 3},
+    {"name":"Yeoman", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/yeoman.png", "rating": 4},
+    {"name":"Bootstrap", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/boot.png", "rating": 4},
+    {"name":"Jquery", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/jquery.png", "rating": 3},
+    {"name":"Js", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/js.png", "rating": 3},
+    {"name":"Rails", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/rails.png", "rating": 2.5},
+    {"name":"Ruby", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/ruby.png", "rating": 3},
+    {"name":"FCPX", "type": "design", "src":"https://s3-us-west-2.amazonaws.com/rb-media/fcp.png", "rating": 3}
+
+
+]}
