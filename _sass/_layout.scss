@@ -181,11 +181,11 @@ $parallax__layers: 8;
 //me
 
 .my-info {
-  //display: table;
+  display: table;
   .me, .skills {
     //height: 60vh;
-    //display: table-cell;
-    //float: none;
+    display: table-cell;
+    float: none;
     img {
       display: block;
       height: auto;
@@ -193,15 +193,40 @@ $parallax__layers: 8;
   }
   .me {
     background-color: $v1-color-l-teal;
+    .logo{
+      margin-top:65px;
+    }
+    a, .title {
+      text-align: center;
+    }
+    .title {
+      font-size: 3vmin;
+      margin-top:10px;
+      margin-bottom:0;
+    }
+    .links {
+      width: 53px;
+      margin: auto;
+      a {
+        &:hover{
+          color:$v1-color-pink;
+        }
+      }
+      span{
+        color:$v1-color-d-pink;
+      }
+    }
     img {
       margin: auto;
       max-width: 45%;
     }
+
   }
   .skills {
     background-color: $v1-color-m-teal;
     .category {
-      text-align: center;
+      text-align: left;
+      font-weight: bolder;
       margin-top: 20px;
     }
     .icon-col {
@@ -209,16 +234,26 @@ $parallax__layers: 8;
     }
     .icon-cover {
       position: relative;
+      @media all and (min-width: 768px) {
+        &:hover {
+          img {
+            opacity: .2;
+          }
+          .skill-info {
+            display: block;
+          }
+        }
+      }
       .skill-info {
         position: absolute;
-        //z-index: 50;
         display: none;
         width: 100%;
-        top: 0;
+        top: -6px;
         text-align: center;
         left: 0;
         p {
           position: relative;
+          font-weight: bolder;
         }
         .name {
           top: 20px;
@@ -227,6 +262,10 @@ $parallax__layers: 8;
         .rating {
           bottom: 3px;
           font-size: 3vmin;
+        }
+        .rating-star {
+          font-size: 10px;
+          margin-bottom: 0;
         }
 
       }
@@ -491,6 +530,18 @@ $parallax__layers: 8;
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+
+  .icon-cover {
+    &:hover {
+      img {
+        opacity: .7;
+      }
+      .skill-info {
+        display: block;
+      }
+    }
+  }
+
   .image-cover {
     &:hover {
       opacity: .7;
@@ -503,26 +554,19 @@ $parallax__layers: 8;
       }
     }
   }
-  .icon-cover {
-    &:hover {
-      img {
-        opacity: .4;
-      }
-      .skill-info {
-        display: block;
-      }
-    }
-  }
+
   .my-info .skills .icon-cover img {
     height: 9vmin;
   }
-  .my-info {
-    display: table;
-    .me, .skills {
-      display: table-cell;
-      float: none;
-    }
-  }
+
+  //.my-info {
+  //  display: table;
+  //  .me, .skills {
+  //    display: table-cell;
+  //    float: none;
+  //  }
+  //}
+
 }
 
 @include media-query($on-palm) {

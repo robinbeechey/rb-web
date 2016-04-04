@@ -16,6 +16,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://robinbeechey.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
+angel_list: "https://angel.co/robin-beechey"
+linkedin: "https://ca.linkedin.com/in/robinbeechey"
+medium: "https://medium.com/@robinbeechey"
 mediaBucket: "http://rb-media.s3-us-west-2.amazonaws.com/"
 
 # Build settings

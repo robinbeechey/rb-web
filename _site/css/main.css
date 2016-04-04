@@ -270,43 +270,73 @@ html {
 .tabContent.hide {
   display: none; }
 
-.my-info .me img, .my-info .skills img {
-  display: block;
-  height: auto; }
-.my-info .me {
-  background-color: #e8fff6; }
-  .my-info .me img {
-    margin: auto;
-    max-width: 45%; }
-.my-info .skills {
-  background-color: #d2f3f0; }
-  .my-info .skills .category {
-    text-align: center;
-    margin-top: 20px; }
-  .my-info .skills .icon-col {
-    padding: 5px; }
-  .my-info .skills .icon-cover {
-    position: relative; }
-    .my-info .skills .icon-cover .skill-info {
-      position: absolute;
-      display: none;
-      width: 100%;
-      top: 0;
-      text-align: center;
-      left: 0; }
-      .my-info .skills .icon-cover .skill-info p {
-        position: relative; }
-      .my-info .skills .icon-cover .skill-info .name {
-        top: 20px;
-        font-size: 2vmin; }
-      .my-info .skills .icon-cover .skill-info .rating {
-        bottom: 3px;
-        font-size: 3vmin; }
-    .my-info .skills .icon-cover img {
-      border: solid 6px #FFFFFF;
-      background: #e8fff6;
-      height: 16vmin;
+.my-info {
+  display: table; }
+  .my-info .me, .my-info .skills {
+    display: table-cell;
+    float: none; }
+    .my-info .me img, .my-info .skills img {
+      display: block;
+      height: auto; }
+  .my-info .me {
+    background-color: #e8fff6; }
+    .my-info .me .logo {
+      margin-top: 65px; }
+    .my-info .me a, .my-info .me .title {
+      text-align: center; }
+    .my-info .me .title {
+      font-size: 3vmin;
+      margin-top: 10px;
+      margin-bottom: 0; }
+    .my-info .me .links {
+      width: 53px;
       margin: auto; }
+      .my-info .me .links a:hover {
+        color: #F87581; }
+      .my-info .me .links span {
+        color: #C06E85; }
+    .my-info .me img {
+      margin: auto;
+      max-width: 45%; }
+  .my-info .skills {
+    background-color: #d2f3f0; }
+    .my-info .skills .category {
+      text-align: left;
+      font-weight: bolder;
+      margin-top: 20px; }
+    .my-info .skills .icon-col {
+      padding: 5px; }
+    .my-info .skills .icon-cover {
+      position: relative; }
+      @media all and (min-width: 768px) {
+        .my-info .skills .icon-cover:hover img {
+          opacity: .2; }
+        .my-info .skills .icon-cover:hover .skill-info {
+          display: block; } }
+      .my-info .skills .icon-cover .skill-info {
+        position: absolute;
+        display: none;
+        width: 100%;
+        top: -6px;
+        text-align: center;
+        left: 0; }
+        .my-info .skills .icon-cover .skill-info p {
+          position: relative;
+          font-weight: bolder; }
+        .my-info .skills .icon-cover .skill-info .name {
+          top: 20px;
+          font-size: 2vmin; }
+        .my-info .skills .icon-cover .skill-info .rating {
+          bottom: 3px;
+          font-size: 3vmin; }
+        .my-info .skills .icon-cover .skill-info .rating-star {
+          font-size: 10px;
+          margin-bottom: 0; }
+      .my-info .skills .icon-cover img {
+        border: solid 6px #FFFFFF;
+        background: #e8fff6;
+        height: 16vmin;
+        margin: auto; }
 
 #preview {
   background: rgba(82, 82, 82, 0.8);
@@ -491,6 +521,11 @@ html {
     width: calc(100% - (30px / 2)); } }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+  .icon-cover:hover img {
+    opacity: .7; }
+  .icon-cover:hover .skill-info {
+    display: block; }
+
   .image-cover:hover {
     opacity: .7;
     cursor: pointer; }
@@ -500,19 +535,8 @@ html {
       left: 46%;
       font-size: x-large; }
 
-  .icon-cover:hover img {
-    opacity: .4; }
-  .icon-cover:hover .skill-info {
-    display: block; }
-
   .my-info .skills .icon-cover img {
-    height: 9vmin; }
-
-  .my-info {
-    display: table; }
-    .my-info .me, .my-info .skills {
-      display: table-cell;
-      float: none; } }
+    height: 9vmin; } }
 @media screen and (max-width: 600px) {
   .footer-col {
     float: none;

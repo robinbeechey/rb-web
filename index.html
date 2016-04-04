@@ -44,6 +44,16 @@ title: Robin Beechey
                 <div class="row my-info">
                     <div class="col-xs-12 col-sm-6 me">
                         <img class="logo" src="http://rb-media.s3.amazonaws.com/rb_logo1_svg.svg"/>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p class="title">Jr Web Developer</p>
+                                <div class="links">
+                                    <a href="{{ site.linkedin }}"><span class="fa fa-linkedin-square"></span></a>
+                                    <a href="{{ site.angel_list }}"><span class="fa fa-angellist"></span></a>
+                                    <a href="{{ site.medium }}"><span class="fa fa-medium"></span></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 skills">
                         <div class="row">
@@ -62,7 +72,9 @@ title: Robin Beechey
                                             <img class="icon" src="{{ skill.src }}"/>
                                             <div class="skill-info">
                                                 <p class="name">{{ skill.name }}</p>
-                                                <p class="rating">{{ skill.rating }}</p>
+                                                {% for star in (1..skill.rating) %}
+                                                <p class="rating-star fa fa-star"></p>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>
@@ -82,7 +94,9 @@ title: Robin Beechey
                                             <img class="icon" src="{{ skill.src }}"/>
                                             <div class="skill-info">
                                                 <p class="name">{{ skill.name }}</p>
-                                                <p class="rating">{{ skill.rating }}</p>
+                                                {% for star in (1..skill.rating) %}
+                                                <p class="rating-star fa fa-star"></p>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>
@@ -103,7 +117,9 @@ title: Robin Beechey
                                             <img class="icon" src="{{ skill.src }}"/>
                                             <div class="skill-info">
                                                 <p class="name">{{ skill.name }}</p>
-                                                <p class="rating">{{ skill.rating }}</p>
+                                                {% for star in (1..skill.rating) %}
+                                                <p class="rating-star fa fa-star"></p>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>

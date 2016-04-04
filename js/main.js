@@ -241,12 +241,12 @@ var interval = setInterval(function () {
 }, 100);
 
 
-function initHoverRating() {
-    var $skillIcons = $('.skills .icon');
-    $skillIcons.hover(function () {
-        //this.hide();
-    })
-}
+//function initHoverRating() {
+//    var $skillIcons = $('.skills .icon');
+//    $skillIcons.hover(function () {
+//        //this.hide();
+//    })
+//}
 
 
 
