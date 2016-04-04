@@ -301,9 +301,10 @@ html {
   .my-info .skills {
     background-color: #d2f3f0; }
     .my-info .skills .category {
-      text-align: left;
-      font-weight: bolder;
+      text-align: center;
       margin-top: 20px; }
+      .my-info .skills .category h5 {
+        font-weight: bolder; }
     .my-info .skills .icon-col {
       padding: 5px; }
     .my-info .skills .icon-cover {
