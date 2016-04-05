@@ -64,6 +64,7 @@ $parallax__layers: 8;
 @for $i from 0 through $parallax__layers {
   $x: ($parallax__layers - $i) / 2;
   #keyart-#{$i} {
+    //background-image: url('../img/v3-parallax#{$i}.png');
     background-image: url('http://rb-media.s3.amazonaws.com/v3-parallax#{$i}.png');
   }
 }
@@ -181,11 +182,11 @@ $parallax__layers: 8;
 //me
 
 .my-info {
-  display: table;
+  //display: table;
   .me, .skills {
-    //height: 60vh;
-    display: table-cell;
-    float: none;
+    min-height:525px;
+    //display: table-cell;
+    //float: none;
     img {
       display: block;
       height: auto;

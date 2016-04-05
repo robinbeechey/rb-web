@@ -270,74 +270,71 @@ html {
 .tabContent.hide {
   display: none; }
 
-.my-info {
-  display: table; }
-  .my-info .me, .my-info .skills {
-    display: table-cell;
-    float: none; }
-    .my-info .me img, .my-info .skills img {
-      display: block;
-      height: auto; }
-  .my-info .me {
-    background-color: #e8fff6; }
-    .my-info .me .logo {
-      margin-top: 65px; }
-    .my-info .me a, .my-info .me .title {
-      text-align: center; }
-    .my-info .me .title {
-      font-size: 3vmin;
-      margin-top: 10px;
-      margin-bottom: 0; }
-    .my-info .me .links {
-      width: 53px;
-      margin: auto; }
-      .my-info .me .links a:hover {
-        color: #F87581; }
-      .my-info .me .links span {
-        color: #C06E85; }
-    .my-info .me img {
-      margin: auto;
-      max-width: 45%; }
-  .my-info .skills {
-    background-color: #d2f3f0; }
-    .my-info .skills .category {
+.my-info .me, .my-info .skills {
+  min-height: 525px; }
+  .my-info .me img, .my-info .skills img {
+    display: block;
+    height: auto; }
+.my-info .me {
+  background-color: #e8fff6; }
+  .my-info .me .logo {
+    margin-top: 65px; }
+  .my-info .me a, .my-info .me .title {
+    text-align: center; }
+  .my-info .me .title {
+    font-size: 3vmin;
+    margin-top: 10px;
+    margin-bottom: 0; }
+  .my-info .me .links {
+    width: 53px;
+    margin: auto; }
+    .my-info .me .links a:hover {
+      color: #F87581; }
+    .my-info .me .links span {
+      color: #C06E85; }
+  .my-info .me img {
+    margin: auto;
+    max-width: 45%; }
+.my-info .skills {
+  background-color: #d2f3f0; }
+  .my-info .skills .category {
+    text-align: center;
+    margin-top: 20px; }
+    .my-info .skills .category h5 {
+      font-weight: bolder; }
+  .my-info .skills .icon-col {
+    padding: 5px; }
+  .my-info .skills .icon-cover {
+    position: relative; }
+    @media all and (min-width: 768px) {
+      .my-info .skills .icon-cover:hover img {
+        opacity: .2; }
+      .my-info .skills .icon-cover:hover .skill-info {
+        display: block; } }
+    .my-info .skills .icon-cover .skill-info {
+      position: absolute;
+      display: none;
+      width: 100%;
+      top: -6px;
       text-align: center;
-      margin-top: 20px; }
-      .my-info .skills .category h5 {
+      left: 0; }
+      .my-info .skills .icon-cover .skill-info p {
+        position: relative;
         font-weight: bolder; }
-    .my-info .skills .icon-col {
-      padding: 5px; }
-    .my-info .skills .icon-cover {
-      position: relative; }
-      @media all and (min-width: 768px) {
-        .my-info .skills .icon-cover:hover img {
-          opacity: .2; }
-        .my-info .skills .icon-cover:hover .skill-info {
-          display: block; } }
-      .my-info .skills .icon-cover .skill-info {
-        position: absolute;
-        display: none;
-        width: 100%;
-        top: -6px;
-        text-align: center;
-        left: 0; }
-        .my-info .skills .icon-cover .skill-info p {
-          position: relative;
-          font-weight: bolder; }
-        .my-info .skills .icon-cover .skill-info .name {
-          top: 20px;
-          font-size: 2vmin; }
-        .my-info .skills .icon-cover .skill-info .rating {
-          bottom: 3px;
-          font-size: 3vmin; }
-        .my-info .skills .icon-cover .skill-info .rating-star {
-          font-size: 10px;
-          margin-bottom: 0; }
-      .my-info .skills .icon-cover img {
-        border: solid 6px #FFFFFF;
-        background: #e8fff6;
-        height: 16vmin;
-        margin: auto; }
+      .my-info .skills .icon-cover .skill-info .name {
+        top: 20px;
+        font-size: 2vmin; }
+      .my-info .skills .icon-cover .skill-info .rating {
+        bottom: 3px;
+        font-size: 3vmin; }
+      .my-info .skills .icon-cover .skill-info .rating-star {
+        font-size: 10px;
+        margin-bottom: 0; }
+    .my-info .skills .icon-cover img {
+      border: solid 6px #FFFFFF;
+      background: #e8fff6;
+      height: 16vmin;
+      margin: auto; }
 
 #preview {
   background: rgba(82, 82, 82, 0.8);
