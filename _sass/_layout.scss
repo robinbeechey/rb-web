@@ -300,8 +300,12 @@ $parallax__layers: 8;
       position: relative;
       @media all and (min-width: 768px) {
         &:hover {
+          //transition: all 1s ease;
           img {
             opacity: .2;
+          }
+          .icon{
+            border-radius: 0;
           }
           .skill-info {
             display: block;
@@ -339,10 +343,15 @@ $parallax__layers: 8;
       }
 
       img {
-        border: solid 6px #FFFFFF;
-        background: $v1-color-l-teal;
+        //transition: all .5s ease;
+        border: solid 2px white;
+        background: white;
         height: 16vmin;
         margin: auto;
+      }
+      .icon{
+        transition: all .5s ease;
+        border-radius: 50%;
       }
 
     }

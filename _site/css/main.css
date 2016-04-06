@@ -358,6 +358,8 @@ html {
     @media all and (min-width: 768px) {
       .my-info .skills .icon-cover:hover img {
         opacity: .2; }
+      .my-info .skills .icon-cover:hover .icon {
+        border-radius: 0; }
       .my-info .skills .icon-cover:hover .skill-info {
         display: block; } }
     .my-info .skills .icon-cover .skill-info {
@@ -384,10 +386,13 @@ html {
         font-size: 10px;
         margin-bottom: 0; }
     .my-info .skills .icon-cover img {
-      border: solid 6px #FFFFFF;
-      background: #F4FFFB;
+      border: solid 2px white;
+      background: white;
       height: 16vmin;
       margin: auto; }
+    .my-info .skills .icon-cover .icon {
+      transition: all .5s ease;
+      border-radius: 50%; }
 
 #preview {
   background: rgba(82, 82, 82, 0.8);
