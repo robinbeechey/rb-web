@@ -46,9 +46,6 @@ function init() {
 
     imagePreview();
     checkWindowSize();
-    //if mobile dont initiate parallax and set keylayer_parallax position
-    //relative or not fixed
-    //and dont show drape
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         console.log('is mobile');
         $('.white-fade').hide();
@@ -184,7 +181,6 @@ function checkWindowSize() {
 //parallax
 
 function runParallax() {
-    //if is coming from mobile browser
 
     window.addEventListener("scroll", function (e) {
         var top = this.pageYOffset;
@@ -231,16 +227,16 @@ function initMasonry() {
 }
 
 var interval = setInterval(function () {
-    $('html').css({'overflow': 'hidden'});
+    //$('html').css({'overflow': 'hidden'});
     if (document.readyState === 'complete') {
         setTimeout(function () {
-            //console.log('complete');
+            console.log('complete');
             dropDrape();
-            $('html').css({'overflow': 'auto'});
+            $('html').css({'overflow-y': 'scroll'});
             clearInterval(interval);
-        }, 2000);
+        }, 1500);
 
     }
-    //console.log('not complete');
+    console.log('not complete');
 }, 100);
 

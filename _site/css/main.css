@@ -127,7 +127,7 @@ pre {
     fill: #828282; }
 
 html {
-  overflow: auto; }
+  overflow-y: hidden; }
 
 #home-page {
   margin-top: -30px;
@@ -247,7 +247,7 @@ html {
     background-color: #F4FFFB;
     padding-right: 0;
     padding-left: 0;
-    transition: all .25s ease; }
+    transition: all .5s ease; }
     #tabs div a {
       font-size: 3vmin;
       display: block;
@@ -349,6 +349,8 @@ html {
     margin-top: 20px; }
     .my-info .skills .category h5 {
       font-weight: bolder; }
+  .my-info .skills .skill-icons {
+    padding-bottom: 15px; }
   .my-info .skills .icon-col {
     padding: 5px; }
   .my-info .skills .icon-cover {

@@ -5,7 +5,7 @@
 //}
 
 html {
-  overflow: auto;
+  overflow-y: hidden;
 }
 
 #home-page {
@@ -135,7 +135,7 @@ $parallax__layers: 8;
     background-color: $v1-color-l-teal;
     padding-right: 0;
     padding-left: 0;
-    transition: all .25s ease;
+    transition: all .5s ease;
     a {
       font-size: 3vmin;
       display: block;
@@ -289,6 +289,9 @@ $parallax__layers: 8;
       h5 {
         font-weight: bolder;
       }
+    }
+    .skill-icons{
+      padding-bottom: 15px;
     }
     .icon-col {
       padding: 5px;
