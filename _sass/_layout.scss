@@ -28,7 +28,7 @@ html {
 //drapes
 
 .drape-wrapper {
-  display:none;
+  display: none;
   z-index: 102;
   position: fixed;
   width: 100%;
@@ -290,7 +290,7 @@ $parallax__layers: 8;
         font-weight: bolder;
       }
     }
-    .skill-icons{
+    .skill-icons {
       padding-bottom: 15px;
     }
     .icon-col {
@@ -299,12 +299,15 @@ $parallax__layers: 8;
     .icon-cover {
       position: relative;
       @media all and (min-width: 768px) {
+        .icon {
+          transition: all .5s ease;
+          border-radius: 50%;
+        }
         &:hover {
-          //transition: all 1s ease;
           img {
             opacity: .2;
           }
-          .icon{
+          .icon {
             border-radius: 0;
           }
           .skill-info {
@@ -343,15 +346,10 @@ $parallax__layers: 8;
       }
 
       img {
-        //transition: all .5s ease;
         border: solid 2px white;
         background: white;
         height: 16vmin;
         margin: auto;
-      }
-      .icon{
-        transition: all .5s ease;
-        border-radius: 50%;
       }
 
     }

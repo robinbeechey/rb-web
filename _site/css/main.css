@@ -356,6 +356,9 @@ html {
   .my-info .skills .icon-cover {
     position: relative; }
     @media all and (min-width: 768px) {
+      .my-info .skills .icon-cover .icon {
+        transition: all .5s ease;
+        border-radius: 50%; }
       .my-info .skills .icon-cover:hover img {
         opacity: .2; }
       .my-info .skills .icon-cover:hover .icon {
@@ -390,9 +393,6 @@ html {
       background: white;
       height: 16vmin;
       margin: auto; }
-    .my-info .skills .icon-cover .icon {
-      transition: all .5s ease;
-      border-radius: 50%; }
 
 #preview {
   background: rgba(82, 82, 82, 0.8);
