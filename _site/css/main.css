@@ -134,7 +134,52 @@ html {
   margin-bottom: -30px; }
 
 #parallax {
-  display: block; }
+  display: none; }
+
+#no-parallax {
+  display: none;
+  background-image: url("http://rb-media.s3.amazonaws.com/no-parallax.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+.drape-wrapper {
+  display: none;
+  z-index: 102;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 15px; }
+  .drape-wrapper .drape {
+    height: 100vh; }
+    .drape-wrapper .drape.left {
+      right: 0;
+      transition: right 4s ease;
+      background-color: #F4FFFB; }
+    .drape-wrapper .drape.right {
+      left: 0;
+      transition: left 4s ease;
+      background-color: #F4FFFB; }
+      .drape-wrapper .drape.right .logo-button {
+        position: absolute;
+        right: 0;
+        top: 25%;
+        left: -65px; }
+        .drape-wrapper .drape.right .logo-button img {
+          max-width: 150px; }
+        .drape-wrapper .drape.right .logo-button .loader {
+          width: 80px;
+          position: absolute;
+          left: 32px;
+          bottom: -20px; }
+
+.white-fade {
+  height: 100vh;
+  background-color: white;
+  z-index: 101;
+  position: fixed;
+  width: 100%;
+  top: 0; }
 
 .keyart, .keyart_layer {
   height: 1000px; }
@@ -286,12 +331,14 @@ html {
     margin-top: 10px;
     margin-bottom: 0; }
   .my-info .me .links {
-    width: 53px;
+    width: 80px;
     margin: auto; }
-    .my-info .me .links a:hover {
-      color: #F87581; }
-    .my-info .me .links span {
-      color: #C06E85; }
+    .my-info .me .links a {
+      margin: 5px; }
+      .my-info .me .links a:visited {
+        color: #e287a0; }
+      .my-info .me .links a:hover {
+        color: #F87581; }
   .my-info .me img {
     margin: auto;
     max-width: 45%; }
@@ -364,43 +411,6 @@ html {
       width: 58vh; }
     #preview img.wide {
       width: 90vh; }
-
-.drape-wrapper {
-  z-index: 102;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 15px; }
-  .drape-wrapper .drape {
-    height: 100vh; }
-    .drape-wrapper .drape.left {
-      right: 0;
-      transition: right 4s ease;
-      background-color: #F4FFFB; }
-    .drape-wrapper .drape.right {
-      left: 0;
-      transition: left 4s ease;
-      background-color: #F4FFFB; }
-      .drape-wrapper .drape.right .logo-button {
-        position: absolute;
-        right: 0;
-        top: 25%;
-        left: -65px; }
-        .drape-wrapper .drape.right .logo-button img {
-          max-width: 150px; }
-        .drape-wrapper .drape.right .logo-button .loader {
-          width: 80px;
-          position: absolute;
-          left: 32px;
-          bottom: -20px; }
-
-.white-fade {
-  height: 100vh;
-  background-color: white;
-  z-index: 101;
-  position: fixed;
-  width: 100%;
-  top: 0; }
 
 .post-box {
   margin: 15px 0 15px 0; }

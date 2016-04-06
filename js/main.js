@@ -1,3 +1,5 @@
+//need to clean everything!!
+
 //cookie storage for drape
 
 function setCookie(cname, cvalue, exseconds) {
@@ -40,11 +42,8 @@ var tabLinks = new Array();
 var contentDivs = new Array();
 
 
-//initializer for all
-
 function init() {
 
-    //checkCookie();
     imagePreview();
     checkWindowSize();
     //if mobile dont initiate parallax and set keylayer_parallax position
@@ -52,15 +51,16 @@ function init() {
     //and dont show drape
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         console.log('is mobile');
-        $('.drape-wrapper').hide();
         $('.white-fade').hide();
+        $('#no-parallax').show();
         $('.keyart_layer.parallax').css('position', 'absolute');
     } else {
+        $('.drape-wrapper').show();
+        $('#parallax').show();
         initiateParallax();
         console.log('not mobile');
     }
     initTabs();
-
 
 }
 

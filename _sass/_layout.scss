@@ -14,7 +14,63 @@ html {
 }
 
 #parallax {
-  display: block;
+  display: none;
+}
+
+#no-parallax {
+  display: none;
+  background-image: url('http://rb-media.s3.amazonaws.com/no-parallax.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+//drapes
+
+.drape-wrapper {
+  display:none;
+  z-index: 102;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 15px;
+  .drape {
+    height: 100vh;
+    &.left {
+      right: 0;
+      transition: right 4s ease;
+      background-color: $v1-color-l-teal;
+    }
+    &.right {
+      left: 0;
+      transition: left 4s ease;
+      background-color: $v1-color-l-teal;
+      .logo-button {
+        position: absolute;
+        right: 0;
+        top: 25%;
+        left: -65px;
+        img {
+          max-width: 150px;
+        }
+        .loader {
+          width: 80px;
+          position: absolute;
+          left: 32px;
+          bottom: -20px;
+        }
+      }
+    }
+  }
+}
+
+.white-fade {
+  height: 100vh;
+  background-color: white;
+  z-index: 101;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .keyart, .keyart_layer {
@@ -206,15 +262,17 @@ $parallax__layers: 8;
       margin-bottom: 0;
     }
     .links {
-      width: 53px;
+      width: 80px;
       margin: auto;
       a {
-        &:hover {
-          color: $v1-color-pink;
+        margin: 5px;
+
+        &:visited {
+          color: $v1-color-d-pink;
         }
-      }
-      span {
-        color: $v1-color-d-pink;
+        &:hover {
+          color: $v1-color-m-pink;
+        }
       }
     }
     img {
@@ -317,53 +375,6 @@ $parallax__layers: 8;
       width: 90vh;
     }
   }
-}
-
-//drapes
-
-.drape-wrapper {
-  z-index: 102;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 15px;
-  .drape {
-    height: 100vh;
-    &.left {
-      right: 0;
-      transition: right 4s ease;
-      background-color: $v1-color-l-teal;
-    }
-    &.right {
-      left: 0;
-      transition: left 4s ease;
-      background-color: $v1-color-l-teal;
-      .logo-button {
-        position: absolute;
-        right: 0;
-        top: 25%;
-        left: -65px;
-        img {
-          max-width: 150px;
-        }
-        .loader {
-          width: 80px;
-          position: absolute;
-          left: 32px;
-          bottom: -20px;
-        }
-      }
-    }
-  }
-}
-
-.white-fade {
-  height: 100vh;
-  background-color: white;
-  z-index: 101;
-  position: fixed;
-  width: 100%;
-  top: 0;
 }
 
 //Masonry
