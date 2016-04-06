@@ -199,7 +199,7 @@ html {
   list-style-type: none; }
   #tabs div {
     display: inline;
-    background-color: #e8fff6;
+    background-color: #F4FFFB;
     padding-right: 0;
     padding-left: 0;
     transition: all .25s ease; }
@@ -213,62 +213,62 @@ html {
       text-decoration: none;
       line-height: 4;
       transition: all .25s ease;
-      background-color: #e8fff6; }
+      background-color: #F4FFFB; }
       #tabs div a:hover {
         color: #424242;
-        background-color: #d2f3f0; }
+        background-color: #EBF7F6; }
       #tabs div a.selected {
         color: #424242;
         font-weight: bold;
-        background-color: #d2f3f0; }
+        background-color: #EBF7F6; }
 
 .selected {
-  background-color: #d2f3f0; }
+  background-color: #EBF7F6 !important; }
 
-.tabContent .graphics img {
-  border: solid 10px red; }
-.tabContent .project {
-  box-shadow: 0px 1px 2px #888888; }
-  .tabContent .project .image-cover {
-    position: relative;
-    background-color: #F6F8F9; }
-    .tabContent .project .image-cover img {
-      display: block;
-      max-width: 100%;
-      height: auto; }
-    .tabContent .project .image-cover iframe {
-      width: 100%;
-      min-height: 250px; }
-    .tabContent .project .image-cover span {
-      position: absolute;
-      display: none; }
-    .tabContent .project .image-cover:hover span {
-      display: block;
-      top: 48%;
-      left: 46%;
-      font-size: x-large; }
-  .tabContent .project .info {
-    padding: 5px;
-    background-color: white; }
-    .tabContent .project .info ul {
-      list-style-type: none;
-      margin-left: 18px; }
-      .tabContent .project .info ul li {
-        text-indent: -8px; }
-    .tabContent .project .info .description {
-      margin-top: 14px;
-      margin-bottom: 11px; }
-    .tabContent .project .info p {
-      font-size: 2vmin;
-      margin-bottom: 6px; }
-    .tabContent .project .info a {
-      text-decoration: none; }
-    .tabContent .project .info .title {
-      margin-top: 10px;
-      margin-bottom: 8px;
-      font-weight: bold; }
-.tabContent.hide {
-  display: none; }
+.tabContent {
+  transition: height .5s ease; }
+  .tabContent .project {
+    box-shadow: 0px 1px 2px #888888; }
+    .tabContent .project .image-cover {
+      position: relative;
+      background-color: #F6F8F9; }
+      .tabContent .project .image-cover img {
+        display: block;
+        max-width: 100%;
+        height: auto; }
+      .tabContent .project .image-cover iframe {
+        width: 100%;
+        min-height: 250px; }
+      .tabContent .project .image-cover span {
+        position: absolute;
+        display: none; }
+      .tabContent .project .image-cover:hover span {
+        display: block;
+        top: 48%;
+        left: 46%;
+        font-size: x-large; }
+    .tabContent .project .info {
+      padding: 5px;
+      background-color: white; }
+      .tabContent .project .info ul {
+        list-style-type: none;
+        margin-left: 18px; }
+        .tabContent .project .info ul li {
+          text-indent: -8px; }
+      .tabContent .project .info .description {
+        margin-top: 14px;
+        margin-bottom: 11px; }
+      .tabContent .project .info p {
+        font-size: 2vmin;
+        margin-bottom: 6px; }
+      .tabContent .project .info a {
+        text-decoration: none; }
+      .tabContent .project .info .title {
+        margin-top: 10px;
+        margin-bottom: 8px;
+        font-weight: bold; }
+  .tabContent.hide {
+    display: none; }
 
 .my-info .me, .my-info .skills {
   min-height: 525px; }
@@ -276,7 +276,7 @@ html {
     display: block;
     height: auto; }
 .my-info .me {
-  background-color: #e8fff6; }
+  background-color: #F4FFFB; }
   .my-info .me .logo {
     margin-top: 65px; }
   .my-info .me a, .my-info .me .title {
@@ -296,7 +296,7 @@ html {
     margin: auto;
     max-width: 45%; }
 .my-info .skills {
-  background-color: #d2f3f0; }
+  background-color: #EBF7F6; }
   .my-info .skills .category {
     text-align: center;
     margin-top: 20px; }
@@ -332,7 +332,7 @@ html {
         margin-bottom: 0; }
     .my-info .skills .icon-cover img {
       border: solid 6px #FFFFFF;
-      background: #e8fff6;
+      background: #F4FFFB;
       height: 16vmin;
       margin: auto; }
 
@@ -372,11 +372,11 @@ html {
     .drape-wrapper .drape.left {
       right: 0;
       transition: right 4s ease;
-      background-color: #e8fff6; }
+      background-color: #F4FFFB; }
     .drape-wrapper .drape.right {
       left: 0;
       transition: left 4s ease;
-      background-color: #e8fff6; }
+      background-color: #F4FFFB; }
       .drape-wrapper .drape.right .logo-button {
         position: absolute;
         right: 0;
@@ -405,6 +405,9 @@ html {
   left: 1000px !important; }
 .slide.to-left {
   right: 1000px !important; }
+
+.piki {
+  height: 200px; }
 
 /**
  * Site header
@@ -534,7 +537,7 @@ html {
       font-size: x-large; }
 
   .my-info .skills .icon-cover img {
-    height: 9vmin; } }
+    height: 7vmin; } }
 @media screen and (max-width: 600px) {
   .footer-col {
     float: none;

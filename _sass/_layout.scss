@@ -105,15 +105,15 @@ $parallax__layers: 8;
 }
 
 .selected {
-  background-color: $v1-color-m-teal;
+  background-color: $v1-color-m-teal !important;
 }
 
 .tabContent {
-
+  transition: height .5s ease;
   .graphics {
-    img {
-      border: solid 10px red;
-    }
+    //img {
+    //  border: solid 10px red;
+    //}
   }
 
   .project {
@@ -377,6 +377,10 @@ $parallax__layers: 8;
   }
 }
 
+.piki{
+  height:200px;
+}
+
 /**
  * Site header
  */
@@ -559,7 +563,7 @@ $parallax__layers: 8;
   }
 
   .my-info .skills .icon-cover img {
-    height: 9vmin;
+    height: 7vmin;
   }
 
   //.my-info {

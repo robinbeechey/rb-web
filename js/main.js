@@ -50,6 +50,7 @@ function init() {
     checkWindowSize();
     initiateParallax();
     initTabs();
+    //initMasonry();
     //initHoverRating();
 
 
@@ -89,7 +90,6 @@ function initTabs() {
 
     for (var id in contentDivs) {
         if (j != 0) {
-            //$('#' + id).addClass('hide');
             $('#' + id).hide();
         }
         j++;
@@ -100,29 +100,24 @@ function initTabs() {
 function showTab() {
     var selectedId = getHash(this.getAttribute('href'));
 
-
-    // Highlight the selected tab, and dim all others.
-    // Also show the selected content div, and hide all others.
+    initMasonry();
     for (var id in contentDivs) {
         var $contentDiv = $('#' + id);
 
         if (id == selectedId) {
             $(tabLinks[id]).addClass('selected');
             $contentDiv.addClass('selected');
-            //$contentDiv.removeClass('hide');
             $contentDiv.show();
         } else {
+            $contentDiv.hide();
             $(tabLinks[id]).removeClass('selected');
             $contentDiv.removeClass('selected');
-            $contentDiv.hide();
-            //$contentDiv.addClass('hide');
-
         }
     }
 
     // Stop the browser following the link
 
-    initMasonry();
+    //initMasonry();
     return false;
 }
 
@@ -207,7 +202,7 @@ function dropDrape() {
     //setCookie('clicked', 'true', 5);
     setTimeout(function () {
         $('.drape-wrapper').remove();
-    }, 2000);
+    }, 1500);
 };
 
 function initMasonry() {
