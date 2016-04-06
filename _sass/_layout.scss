@@ -184,7 +184,7 @@ $parallax__layers: 8;
 .my-info {
   //display: table;
   .me, .skills {
-    min-height:525px;
+    min-height: 525px;
     //display: table-cell;
     //float: none;
     img {
@@ -259,8 +259,12 @@ $parallax__layers: 8;
           font-weight: bolder;
         }
         .name {
+          width: 70px;
           top: 20px;
-          font-size: 2vmin;
+          font-size: 12px;
+          position: relative;
+          right: 3px;
+          font-weight: bolder;
         }
         .rating {
           bottom: 3px;
@@ -377,8 +381,8 @@ $parallax__layers: 8;
   }
 }
 
-.piki{
-  height:200px;
+.piki {
+  height: 200px;
 }
 
 /**

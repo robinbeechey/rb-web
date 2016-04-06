@@ -29,9 +29,8 @@ function checkCookie() {
     }
 }
 
-//check cookie and show or not
 
-checkCookie();
+//checkCookie();
 
 
 //tabs
@@ -48,10 +47,19 @@ function init() {
     //checkCookie();
     imagePreview();
     checkWindowSize();
-    initiateParallax();
+    //if mobile dont initiate parallax and set keylayer_parallax position
+    //relative or not fixed
+    //and dont show drape
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        console.log('is mobile');
+        $('.drape-wrapper').hide();
+        $('.white-fade').hide();
+        $('.keyart_layer.parallax').css('position', 'absolute');
+    } else {
+        initiateParallax();
+        console.log('not mobile');
+    }
     initTabs();
-    //initMasonry();
-    //initHoverRating();
 
 
 }
@@ -100,7 +108,7 @@ function initTabs() {
 function showTab() {
     var selectedId = getHash(this.getAttribute('href'));
 
-    initMasonry();
+
     for (var id in contentDivs) {
         var $contentDiv = $('#' + id);
 
@@ -117,7 +125,7 @@ function showTab() {
 
     // Stop the browser following the link
 
-    //initMasonry();
+    initMasonry();
     return false;
 }
 
@@ -136,6 +144,7 @@ function getHash(url) {
 //image preview
 
 function imagePreview() {
+
     var $preview = $('#preview');
     var $window = $(window);
 
@@ -175,6 +184,8 @@ function checkWindowSize() {
 //parallax
 
 function runParallax() {
+    //if is coming from mobile browser
+
     window.addEventListener("scroll", function (e) {
         var top = this.pageYOffset;
         var layers = document.getElementsByClassName("parallax");
@@ -199,7 +210,6 @@ function dropDrape() {
     $('.left').addClass('slide to-left');
     $('.right').addClass('slide to-right');
     $('.white-fade').fadeOut(2000, "linear");
-    //setCookie('clicked', 'true', 5);
     setTimeout(function () {
         $('.drape-wrapper').remove();
     }, 1500);
@@ -228,20 +238,9 @@ var interval = setInterval(function () {
             dropDrape();
             $('html').css({'overflow': 'auto'});
             clearInterval(interval);
-            //done();
         }, 2000);
 
     }
     //console.log('not complete');
 }, 100);
-
-
-//function initHoverRating() {
-//    var $skillIcons = $('.skills .icon');
-//    $skillIcons.hover(function () {
-//        //this.hide();
-//    })
-//}
-
-
 

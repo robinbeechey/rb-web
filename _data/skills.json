@@ -22,7 +22,8 @@
     {"name":"Js", "type": "front", "src":"https://s3-us-west-2.amazonaws.com/rb-media/js.png", "rating": 3},
     {"name":"Rails", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/rails.png", "rating": 2.5},
     {"name":"Ruby", "type": "back", "src":"https://s3-us-west-2.amazonaws.com/rb-media/ruby.png", "rating": 3},
-    {"name":"FCPX", "type": "design", "src":"https://s3-us-west-2.amazonaws.com/rb-media/fcp.png", "rating": 3}
+    {"name":"FCPX", "type": "design", "src":"https://s3-us-west-2.amazonaws.com/rb-media/fcp.png", "rating": 3},
+    {"name":"WordPress", "type": "design", "src":"https://s3-us-west-2.amazonaws.com/rb-media/wp.png", "rating": 3}
 
 
 ]}
