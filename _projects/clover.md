@@ -4,6 +4,7 @@ title: Clover
 description: Fake bar, fake beer. Maybe real bar
 image: http://rb-media.s3-us-west-2.amazonaws.com/betty-brick.png
 category: 'graphics'
+date: 2016-03-05
 tools: Illustrator, Photoshop
 ---
 

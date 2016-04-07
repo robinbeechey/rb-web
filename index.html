@@ -136,10 +136,10 @@ thumbnail: https://s3-us-west-2.amazonaws.com/rb-media/rb_logo_og.png
 
             <div id="portfolio">
 
-                {% assign web = site.projects | where: "category", "web" %}
-                {% assign graphics = site.projects | where: "category", "graphics" %}
-                {% assign film = site.projects | where: "category", "film" %}
-                {% assign misc = site.projects | where: "category", "misc" %}
+                {% assign web = site.projects | where: "category", "web" | sort: 'date' %}
+                {% assign graphics = site.projects | where: "category", "graphics" | sort: 'date' %}
+                {% assign film = site.projects | where: "category", "film" | sort: 'date' %}
+                {% assign misc = site.projects | where: "category", "misc" | sort: 'date' %}
 
                 <div id="tabs" class="row">
                     <div class="col-xs-3"><a href="#web">Web</a></div>
@@ -173,7 +173,7 @@ thumbnail: https://s3-us-west-2.amazonaws.com/rb-media/rb_logo_og.png
                 </div>
 
                 <div class="tabContent row graphics" id="graphics">
-                    {% for project in graphics %}
+                    {% for project in graphics reversed %}
 
                     <div class="post-box col-xs-6 col-sm-4">
                         <div class="project">
@@ -199,7 +199,7 @@ thumbnail: https://s3-us-west-2.amazonaws.com/rb-media/rb_logo_og.png
                 </div>
 
                 <div class="tabContent row film" id="film">
-                    {% for project in film %}
+                    {% for project in film reversed %}
 
                     <div class="post-box col-xs-12 col-sm-6">
                         <div class="project">
@@ -212,7 +212,7 @@ thumbnail: https://s3-us-west-2.amazonaws.com/rb-media/rb_logo_og.png
                                 <ul>
                                     <li><p><a target="_blank" href="{{project.musicSource}}"><i
                                             class="fa fa-external-link"></i> Music By
-                                        {{project.musicSource}}</a></p>
+                                        {{project.musicSource | remove: 'http://' | remove: 'https://' }}</a></p>
                                     </li>
                                     <li><p><i class="fa fa-wrench"></i> {{project.tools}}</p></li>
                                 </ul>
@@ -225,7 +225,7 @@ thumbnail: https://s3-us-west-2.amazonaws.com/rb-media/rb_logo_og.png
                 </div>
 
                 <div class="tabContent row misc" id="misc">
-                    {% for project in misc %}
+                    {% for project in misc reversed %}
 
                     <div class="post-box col-xs-12 col-sm-4">
                         <div class="project">
