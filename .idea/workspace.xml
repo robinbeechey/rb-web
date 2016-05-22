@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="def092b8-5bbc-4b94-8c98-0e4f683072d9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_projects/the-bird.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/img/rb_logo1.png" afterPath="$PROJECT_DIR$/_site/img/rb_logo1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/img/rblogo.png" afterPath="$PROJECT_DIR$/_site/img/rblogo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_projects/flor.md" afterPath="$PROJECT_DIR$/_projects/flor.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_projects/pajarito.md" afterPath="$PROJECT_DIR$/_projects/pajarito.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_projects/victoria.md" afterPath="$PROJECT_DIR$/_projects/victoria.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/index.html" afterPath="$PROJECT_DIR$/_site/blog/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/jekyll/update/2016/03/09/new-blog.html" afterPath="$PROJECT_DIR$/_site/jekyll/update/2016/03/09/new-blog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/jekyll/update/2016/03/10/welcome-to-jekyll.html" afterPath="$PROJECT_DIR$/_site/jekyll/update/2016/03/10/welcome-to-jekyll.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_projects/the-bird.md" afterPath="$PROJECT_DIR$/_projects/the-bird.md" />
     </list>
     <ignored path="rb-web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,21 +26,21 @@
     <splitter split-orientation="horizontal" split-proportion="0.46920583">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4815864">
-                  <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                <state vertical-scroll-proportion="-2.5660377">
+                  <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="the-bird.md" pinned="false" current-in-tab="false">
+          <file leaf-file-name="the-bird.md" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/_projects/the-bird.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-6.9259257">
-                  <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.1625683">
+                  <caret line="7" column="108" selection-start-line="7" selection-start-column="108" selection-end-line="7" selection-end-column="108" />
                   <folding />
                 </state>
               </provider>
@@ -62,8 +49,8 @@
           <file leaf-file-name="the-fixie.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/_projects/the-fixie.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.148148">
-                  <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="40" />
+                <state vertical-scroll-proportion="-4.4074073">
+                  <caret line="7" column="87" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="108" />
                   <folding />
                 </state>
               </provider>
@@ -169,8 +156,8 @@
         <option value="$PROJECT_DIR$/_projects/flor.md" />
         <option value="$PROJECT_DIR$/_projects/pajarito.md" />
         <option value="$PROJECT_DIR$/_projects/victoria.md" />
-        <option value="$PROJECT_DIR$/_projects/the-bird.md" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/_projects/the-bird.md" />
       </list>
     </option>
   </component>
@@ -939,26 +926,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5660377">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_projects/the-fixie.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.148148">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="40" />
+        <state vertical-scroll-proportion="-4.4074073">
+          <caret line="7" column="87" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_projects/the-bird.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.9259257">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4815864">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.1625683">
+          <caret line="7" column="108" selection-start-line="7" selection-start-column="108" selection-end-line="7" selection-end-column="108" />
           <folding />
         </state>
       </provider>
