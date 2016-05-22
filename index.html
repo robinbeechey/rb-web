@@ -7,32 +7,32 @@ thumbnail: https://s3-us-west-2.amazonaws.com/rb-media/rb_logo_og.png
 <div class="home">
 
     {% if page.title == 'Robin Beechey' %}
-    <div class="drape-wrapper row">
-        <div class="drape left col-xs-6"></div>
-        <div class="drape right col-xs-6">
-            <div id="drape-button" class="logo-button">
-                <img class="img-responsive" src="http://rb-media.s3.amazonaws.com/rb_logo1.png"/>
-                <img class="loader" src="http://rb-media.s3.amazonaws.com/ajax-loader.gif"/>
-            </div>
-        </div>
-    </div>
+    <!--<div class="drape-wrapper row">-->
+        <!--<div class="drape left col-xs-6"></div>-->
+        <!--<div class="drape right col-xs-6">-->
+            <!--<div id="drape-button" class="logo-button">-->
+                <!--<img class="img-responsive" src="http://rb-media.s3.amazonaws.com/rb_logo1.png"/>-->
+                <!--<img class="loader" src="http://rb-media.s3.amazonaws.com/ajax-loader.gif"/>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
     <div class="white-fade"></div>
     {% endif %}
 
 
     <main id="home-page">
         <div class="keyart" id="no-parallax"></div>
-        <div class="keyart" id="parallax">
-            <div class="keyart_layer parallax" data-speed="2" id="keyart-0"></div>
-            <div class="keyart_layer parallax" data-speed="5" id="keyart-1"></div>
-            <div class="keyart_layer parallax" data-speed="11" id="keyart-2"></div>
-            <div class="keyart_layer parallax" data-speed="16" id="keyart-3"></div>
-            <div class="keyart_layer parallax" data-speed="26" id="keyart-4"></div>
-            <div class="keyart_layer parallax" data-speed="36" id="keyart-5"></div>
-            <div class="keyart_layer parallax" data-speed="49" id="keyart-6"></div>
-            <div class="keyart_layer parallax" data-speed="69" id="keyart-7"></div>
-            <div class="keyart_layer" data-speed="100" id="keyart-8"></div>
-        </div>
+        <!--<div class="keyart" id="parallax">-->
+            <!--<div class="keyart_layer parallax" data-speed="2" id="keyart-0"></div>-->
+            <!--<div class="keyart_layer parallax" data-speed="5" id="keyart-1"></div>-->
+            <!--<div class="keyart_layer parallax" data-speed="11" id="keyart-2"></div>-->
+            <!--<div class="keyart_layer parallax" data-speed="16" id="keyart-3"></div>-->
+            <!--<div class="keyart_layer parallax" data-speed="26" id="keyart-4"></div>-->
+            <!--<div class="keyart_layer parallax" data-speed="36" id="keyart-5"></div>-->
+            <!--<div class="keyart_layer parallax" data-speed="49" id="keyart-6"></div>-->
+            <!--<div class="keyart_layer parallax" data-speed="69" id="keyart-7"></div>-->
+            <!--<div class="keyart_layer" data-speed="100" id="keyart-8"></div>-->
+        <!--</div>-->
         <div id="main-contain">
             <div id="preview" class="row">
                 <div class="col-sm-offset-3 col-sm-6 ">
@@ -210,10 +210,12 @@ thumbnail: https://s3-us-west-2.amazonaws.com/rb-media/rb_logo_og.png
                                 <p class="title">{{ project.title }}</p>
                                 <p class="description">{{project.description}}</p>
                                 <ul>
+                                    {% if project.musicSource != nil %}
                                     <li><p><a target="_blank" href="{{project.musicSource}}"><i
                                             class="fa fa-external-link"></i> Music By
                                         {{project.musicSource | remove: 'http://' | remove: 'https://' }}</a></p>
                                     </li>
+                                    {% endif %}
                                     <li><p><i class="fa fa-wrench"></i> {{project.tools}}</p></li>
                                 </ul>
                             </div>
