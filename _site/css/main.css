@@ -320,79 +320,75 @@ html {
   .my-info .me img, .my-info .skills img {
     display: block;
     height: auto; }
-.my-info .me {
-  background-color: #F4FFFB; }
-  .my-info .me .logo {
-    margin-top: 65px; }
-  .my-info .me a, .my-info .me .title {
-    text-align: center; }
-  .my-info .me .title {
-    font-size: 3vmin;
-    margin-top: 10px;
-    margin-bottom: 0; }
-  .my-info .me .links {
-    width: 80px;
-    margin: auto; }
-    .my-info .me .links a {
-      margin: 5px; }
-      .my-info .me .links a:visited {
-        color: #e287a0; }
-      .my-info .me .links a:hover {
-        color: #F87581; }
-  .my-info .me img {
-    margin: auto;
-    max-width: 45%; }
-.my-info .skills {
-  background-color: #EBF7F6; }
-  .my-info .skills .category {
+.my-info .me .logo {
+  margin-top: 65px; }
+.my-info .me a, .my-info .me .title {
+  text-align: center; }
+.my-info .me .title {
+  font-size: 3vmin;
+  margin-top: 10px;
+  margin-bottom: 0; }
+.my-info .me .links {
+  width: 80px;
+  margin: auto; }
+  .my-info .me .links a {
+    margin: 5px; }
+    .my-info .me .links a:visited {
+      color: #e287a0; }
+    .my-info .me .links a:hover {
+      color: #F87581; }
+.my-info .me img {
+  margin: auto;
+  max-width: 45%; }
+.my-info .skills .category {
+  text-align: center;
+  margin-top: 20px; }
+  .my-info .skills .category h5 {
+    font-weight: bolder; }
+.my-info .skills .skill-icons {
+  padding-bottom: 15px; }
+.my-info .skills .icon-col {
+  padding: 5px; }
+.my-info .skills .icon-cover {
+  position: relative; }
+  @media all and (min-width: 768px) {
+    .my-info .skills .icon-cover .icon {
+      transition: all .5s ease;
+      border-radius: 50%; }
+    .my-info .skills .icon-cover:hover img {
+      opacity: .2; }
+    .my-info .skills .icon-cover:hover .icon {
+      border-radius: 0; }
+    .my-info .skills .icon-cover:hover .skill-info {
+      display: block; } }
+  .my-info .skills .icon-cover .skill-info {
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: -6px;
     text-align: center;
-    margin-top: 20px; }
-    .my-info .skills .category h5 {
+    left: 0; }
+    .my-info .skills .icon-cover .skill-info p {
+      position: relative;
       font-weight: bolder; }
-  .my-info .skills .skill-icons {
-    padding-bottom: 15px; }
-  .my-info .skills .icon-col {
-    padding: 5px; }
-  .my-info .skills .icon-cover {
-    position: relative; }
-    @media all and (min-width: 768px) {
-      .my-info .skills .icon-cover .icon {
-        transition: all .5s ease;
-        border-radius: 50%; }
-      .my-info .skills .icon-cover:hover img {
-        opacity: .2; }
-      .my-info .skills .icon-cover:hover .icon {
-        border-radius: 0; }
-      .my-info .skills .icon-cover:hover .skill-info {
-        display: block; } }
-    .my-info .skills .icon-cover .skill-info {
-      position: absolute;
-      display: none;
-      width: 100%;
-      top: -6px;
-      text-align: center;
-      left: 0; }
-      .my-info .skills .icon-cover .skill-info p {
-        position: relative;
-        font-weight: bolder; }
-      .my-info .skills .icon-cover .skill-info .name {
-        width: 70px;
-        top: 20px;
-        font-size: 12px;
-        position: relative;
-        right: 3px;
-        font-weight: bolder; }
-      .my-info .skills .icon-cover .skill-info .rating {
-        bottom: 3px;
-        font-size: 3vmin; }
-      .my-info .skills .icon-cover .skill-info .rating-star {
-        font-size: 10px;
-        margin-bottom: 0; }
-    .my-info .skills .icon-cover img {
-      border: solid 2px white;
-      background: white;
-      height: 16vmin;
-      margin: auto; }
+    .my-info .skills .icon-cover .skill-info .name {
+      width: 70px;
+      top: 20px;
+      font-size: 12px;
+      position: relative;
+      right: 3px;
+      font-weight: bolder; }
+    .my-info .skills .icon-cover .skill-info .rating {
+      bottom: 3px;
+      font-size: 3vmin; }
+    .my-info .skills .icon-cover .skill-info .rating-star {
+      font-size: 10px;
+      margin-bottom: 0; }
+  .my-info .skills .icon-cover img {
+    border: solid 2px white;
+    background: white;
+    height: 16vmin;
+    margin: auto; }
 
 #preview {
   background: rgba(82, 82, 82, 0.8);
