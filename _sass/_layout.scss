@@ -19,7 +19,7 @@ html {
 
 #no-parallax {
   display: none;
-  background-image: url('http://rb-media.s3.amazonaws.com/no-parallax.png');
+  background-image: url('http://media.robinbeechey.com/no-parallax.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -121,7 +121,7 @@ $parallax__layers: 8;
   $x: ($parallax__layers - $i) / 2;
   #keyart-#{$i} {
     //background-image: url('../img/v3-parallax#{$i}.png');
-    background-image: url('http://rb-media.s3.amazonaws.com/v3-parallax#{$i}.png');
+    background-image: url('http://media.robinbeechey.com/v3-parallax#{$i}.png');
   }
 }
 

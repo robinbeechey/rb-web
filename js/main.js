@@ -2,34 +2,34 @@
 
 //cookie storage for drape
 
-function setCookie(cname, cvalue, exseconds) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exseconds * 1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
-function checkCookie() {
-    var cookie = getCookie("clicked");
-    if (cookie != "") {
-        $('.drape-wrapper').hide();
-    } else {
-        //console.log('no cookie', cookie);
-    }
-}
+//function setCookie(cname, cvalue, exseconds) {
+//    var d = new Date();
+//    d.setTime(d.getTime() + (exseconds * 1000));
+//    var expires = "expires=" + d.toGMTString();
+//    document.cookie = cname + "=" + cvalue + "; " + expires;
+//}
+//
+//function getCookie(cname) {
+//    var name = cname + "=";
+//    var ca = document.cookie.split(';');
+//    for (var i = 0; i < ca.length; i++) {
+//        var c = ca[i];
+//        while (c.charAt(0) == ' ') c = c.substring(1);
+//        if (c.indexOf(name) == 0) {
+//            return c.substring(name.length, c.length);
+//        }
+//    }
+//    return "";
+//}
+//
+//function checkCookie() {
+//    var cookie = getCookie("clicked");
+//    if (cookie != "") {
+//        $('.drape-wrapper').hide();
+//    } else {
+//        //console.log('no cookie', cookie);
+//    }
+//}
 
 
 //checkCookie();
@@ -202,13 +202,10 @@ function initiateParallax() {
 
 
 function dropDrape() {
-    $('.loader').fadeOut();
-    $('.left').addClass('slide to-left');
-    $('.right').addClass('slide to-right');
     $('.white-fade').fadeOut(2000, "linear");
     setTimeout(function () {
         $('.drape-wrapper').remove();
-    }, 1500);
+    }, 500);
 };
 
 function initMasonry() {
@@ -234,7 +231,7 @@ var interval = setInterval(function () {
             dropDrape();
             $('html').css({'overflow-y': 'scroll'});
             clearInterval(interval);
-        }, 1500);
+        }, 500);
 
     }
     console.log('not complete');

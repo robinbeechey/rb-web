@@ -2,7 +2,7 @@
 layout: page
 title: Kollab
 description: Real Time Collaborative Music app
-image: http://rb-media.s3-us-west-2.amazonaws.com/kollab.png
+image: http://media.robinbeechey.com/kollab.png
 siteUrl: http://elkollab.herokuapp.com
 category: 'web'
 date: 2016-03-02
