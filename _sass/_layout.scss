@@ -13,56 +13,6 @@ html {
   margin-bottom: -30px;
 }
 
-#parallax {
-  display: none;
-}
-
-#no-parallax {
-  display: none;
-  background-image: url('http://media.robinbeechey.com/no-parallax.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-}
-
-//drapes
-
-.drape-wrapper {
-  display: none;
-  z-index: 102;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 15px;
-  .drape {
-    height: 100vh;
-    &.left {
-      right: 0;
-      transition: right 4s ease;
-      background-color: $v1-color-l-teal;
-    }
-    &.right {
-      left: 0;
-      transition: left 4s ease;
-      background-color: $v1-color-l-teal;
-      .logo-button {
-        position: absolute;
-        right: 0;
-        top: 25%;
-        left: -65px;
-        img {
-          max-width: 150px;
-        }
-        .loader {
-          width: 80px;
-          position: absolute;
-          left: 32px;
-          bottom: -20px;
-        }
-      }
-    }
-  }
-}
 
 .white-fade {
   height: 100vh;
@@ -109,20 +59,6 @@ html {
   z-index: 99;
   position: relative;
   background-color: white;
-}
-
-#about-me {
-
-}
-
-$parallax__layers: 8;
-
-@for $i from 0 through $parallax__layers {
-  $x: ($parallax__layers - $i) / 2;
-  #keyart-#{$i} {
-    //background-image: url('../img/v3-parallax#{$i}.png');
-    background-image: url('http://media.robinbeechey.com/v3-parallax#{$i}.png');
-  }
 }
 
 //tab content
@@ -262,14 +198,11 @@ $parallax__layers: 8;
       margin-bottom: 0;
     }
     .links {
-      width: 80px;
+      width: 110px;
       margin: auto;
       a {
         margin: 5px;
-
-        &:visited {
-          color: $v1-color-d-pink;
-        }
+        color: $v1-color-d-pink;
         &:hover {
           color: $v1-color-m-pink;
         }
@@ -282,7 +215,6 @@ $parallax__layers: 8;
 
   }
   .skills {
-    //background-color: $v1-color-m-teal;
     .category {
       text-align: center;
       margin-top: 20px;

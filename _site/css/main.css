@@ -105,9 +105,6 @@ pre {
     padding-left: 0; }
 
 /**
- * Wrapper
-// */
-/**
  * Clearfix
  */
 .footer-col-wrapper:after {
@@ -132,46 +129,6 @@ html {
 #home-page {
   margin-top: -30px;
   margin-bottom: -30px; }
-
-#parallax {
-  display: none; }
-
-#no-parallax {
-  display: none;
-  background-image: url("http://media.robinbeechey.com/no-parallax.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 100%; }
-
-.drape-wrapper {
-  display: none;
-  z-index: 102;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 15px; }
-  .drape-wrapper .drape {
-    height: 100vh; }
-    .drape-wrapper .drape.left {
-      right: 0;
-      transition: right 4s ease;
-      background-color: #F4FFFB; }
-    .drape-wrapper .drape.right {
-      left: 0;
-      transition: left 4s ease;
-      background-color: #F4FFFB; }
-      .drape-wrapper .drape.right .logo-button {
-        position: absolute;
-        right: 0;
-        top: 25%;
-        left: -65px; }
-        .drape-wrapper .drape.right .logo-button img {
-          max-width: 150px; }
-        .drape-wrapper .drape.right .logo-button .loader {
-          width: 80px;
-          position: absolute;
-          left: 32px;
-          bottom: -20px; }
 
 .white-fade {
   height: 100vh;
@@ -212,33 +169,6 @@ html {
   z-index: 99;
   position: relative;
   background-color: white; }
-
-#keyart-0 {
-  background-image: url("http://media.robinbeechey.com/v3-parallax0.png"); }
-
-#keyart-1 {
-  background-image: url("http://media.robinbeechey.com/v3-parallax1.png"); }
-
-#keyart-2 {
-  background-image: url("http://media.robinbeechey.com/v3-parallax2.png"); }
-
-#keyart-3 {
-  background-image: url("http://media.robinbeechey.com/v3-parallax3.png"); }
-
-#keyart-4 {
-  background-image: url("http://media.robinbeechey.com/v3-parallax4.png"); }
-
-#keyart-5 {
-  background-image: url("http://media.robinbeechey.com/v3-parallax5.png"); }
-
-#keyart-6 {
-  background-image: url("http://media.robinbeechey.com/v3-parallax6.png"); }
-
-#keyart-7 {
-  background-image: url("http://media.robinbeechey.com/v3-parallax7.png"); }
-
-#keyart-8 {
-  background-image: url("http://media.robinbeechey.com/v3-parallax8.png"); }
 
 #tabs {
   list-style-type: none; }
@@ -329,12 +259,11 @@ html {
   margin-top: 10px;
   margin-bottom: 0; }
 .my-info .me .links {
-  width: 80px;
+  width: 110px;
   margin: auto; }
   .my-info .me .links a {
-    margin: 5px; }
-    .my-info .me .links a:visited {
-      color: #e287a0; }
+    margin: 5px;
+    color: #e287a0; }
     .my-info .me .links a:hover {
       color: #F87581; }
 .my-info .me img {
