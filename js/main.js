@@ -202,7 +202,7 @@ function initiateParallax() {
 
 
 function dropDrape() {
-    $('.white-fade').fadeOut(2000, "linear");
+    $('.white-fade').fadeOut(1000, "linear");
     setTimeout(function () {
         $('.drape-wrapper').remove();
     }, 500);
