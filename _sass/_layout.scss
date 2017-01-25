@@ -51,6 +51,10 @@ html {
   padding-top: 40px;
 }
 
+#portfolio{
+  //display:none;
+}
+
 #portfolio, #about-me {
   max-width: 900px;
   padding: 30px;
@@ -60,6 +64,7 @@ html {
   position: relative;
   background-color: white;
 }
+
 
 //tab content
 
@@ -234,17 +239,20 @@ html {
         .icon {
           transition: all .5s ease;
           border-radius: 50%;
+          border: 2px solid #828282;
+          padding: 5px;
         }
         &:hover {
           img {
-            opacity: .2;
+            opacity: .5;
           }
           .icon {
             border-radius: 0;
           }
-          .skill-info {
-            display: block;
-          }
+
+          //.skill-info {
+          //  display: block;
+          //}
         }
       }
       .skill-info {

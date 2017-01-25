@@ -22,14 +22,14 @@ thumbnail: http://media.robinbeechey.com/rb_logo_og.png
                         <img class="logo" src="http://media.robinbeechey.com/rb_logo1.png"/>
                         <div class="row">
                             <div class="col-xs-12">
-                                <p class="title">Jr Web Developer</p>
+                                <p class="title"></p>
                                 <div class="links">
                                     <a target="_blank" href="{{ site.linkedin }}"><span
                                             class="fa fa-linkedin-square"></span></a>
                                     <a target="_blank" href="{{ site.angel_list }}"><span
                                             class="fa fa-angellist"></span></a>
-                                    <a target="_blank" href="{{ site.medium }}"><span class="fa fa-medium"></span></a>
                                     <a target="_blank" href="{{ site.instagrams }}"><span class="fa fa-instagram"></span></a>
+                                    <a target="_top" href="mailto:robinbeechey@gmail.com"><span class="fa fa-envelope"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -49,6 +49,7 @@ thumbnail: http://media.robinbeechey.com/rb_logo_og.png
                                     <div class="col-xs-3 col-sm-2 icon-col">
                                         <div class="icon-cover">
                                             <img class="icon" src="{{ skill.src }}"/>
+
                                             <div class="skill-info">
                                                 <p class="name">{{ skill.name }}</p>
                                                 {% for star in (1..skill.rating) %}
