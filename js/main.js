@@ -1,239 +1,146 @@
-//need to clean everything!!
-
-//cookie storage for drape
-
-//function setCookie(cname, cvalue, exseconds) {
-//    var d = new Date();
-//    d.setTime(d.getTime() + (exseconds * 1000));
-//    var expires = "expires=" + d.toGMTString();
-//    document.cookie = cname + "=" + cvalue + "; " + expires;
-//}
-//
-//function getCookie(cname) {
-//    var name = cname + "=";
-//    var ca = document.cookie.split(';');
-//    for (var i = 0; i < ca.length; i++) {
-//        var c = ca[i];
-//        while (c.charAt(0) == ' ') c = c.substring(1);
-//        if (c.indexOf(name) == 0) {
-//            return c.substring(name.length, c.length);
-//        }
-//    }
-//    return "";
-//}
-//
-//function checkCookie() {
-//    var cookie = getCookie("clicked");
-//    if (cookie != "") {
-//        $('.drape-wrapper').hide();
-//    } else {
-//        //console.log('no cookie', cookie);
-//    }
-//}
-
-
-//checkCookie();
-
-
-//tabs
-
-
-var tabLinks = new Array();
-var contentDivs = new Array();
-
-
-function init() {
-
-    imagePreview();
-    checkWindowSize();
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        console.log('is mobile');
-        $('.white-fade').hide();
-        $('#no-parallax').show();
-        $('.keyart_layer.parallax').css('position', 'absolute');
-    } else {
-        $('.drape-wrapper').show();
-        $('#parallax').show();
-        initiateParallax();
-        console.log('not mobile');
-    }
-    initTabs();
-
-}
-
-function initTabs() {
-    var tabs = $('#tabs').children();
-
-    for (var i = 0; i < tabs.length; i++) {
-
-        var tabLink = getButton(tabs[i]);
-        var id = getHash(tabLink.getAttribute('href'));
-        tabLinks[id] = tabLink;
-        contentDivs[id] = document.getElementById(id);
-
-    }
-
-
-    var i = 0;
-
-
-    for (var id in tabLinks) {
-
-        tabLinks[id].onclick = showTab;
-        tabLinks[id].onfocus = function () {
-            this.blur()
-        };
-        if (i == 0) {
-            var $contentDiv = $('#' + id);
-            $(tabLinks[id]).addClass('selected') && $contentDiv.addClass('selected');
+$(document).ready(function () {
+        /* fix vertical when not overflow
+         call fullscreenFix() if .fullscreen content changes */
+        function fullscreenFix() {
+            var h = $('body').height();
+            // set .fullscreen height
+            $(".content-b").each(function (i) {
+                if ($(this).innerHeight() > h) {
+                    $(this).closest(".fullscreen").addClass("overflow");
+                }
+            });
         }
-        i++;
-    }
 
-    // Hide all content divs except the first
-    var j = 0;
+        function loopHome() {
+            var $home = $('#home');
+            var styles = [
+                {background: {'background-color': '#B7E3E4', 'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)'}, fontColor: {color: '#F03F35'}},
+                {background: {'background-color': '#F0CF61', 'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)'}, fontColor: {color: 'white'}},
+                {background: {'background-color': '#FFEFE5', 'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)'}, fontColor: {color: '#1FC8A9'}},
+                {background: {'background-color': '#19AAD1', 'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)'}, fontColor: {color: '#FFCC4C'}},
+                {background: {'background-color': '#F4C7EE', 'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)'}, fontColor: {color: '#008FD3'}},
+            ];
+            var p = $home.find('p');
 
-    for (var id in contentDivs) {
-        if (j != 0) {
-            $('#' + id).hide();
-        }
-        j++;
-    }
-}
+            for (var i = 0; i < styles.length; i++) {
+                console.log('i', i);
 
-
-function showTab() {
-    var selectedId = getHash(this.getAttribute('href'));
-
-
-    for (var id in contentDivs) {
-        var $contentDiv = $('#' + id);
-
-        if (id == selectedId) {
-            $(tabLinks[id]).addClass('selected');
-            $contentDiv.addClass('selected');
-            $contentDiv.show();
-        } else {
-            $contentDiv.hide();
-            $(tabLinks[id]).removeClass('selected');
-            $contentDiv.removeClass('selected');
-        }
-    }
-
-    // Stop the browser following the link
-
-    initMasonry();
-    return false;
-}
-
-
-function getButton(element) {
-    return $(element).children()[0];
-}
-
-
-function getHash(url) {
-    var hashPos = url.lastIndexOf('#');
-    return url.substring(hashPos + 1);
-}
-
-
-//image preview
-
-function imagePreview() {
-
-    var $preview = $('#preview');
-    var $window = $(window);
-
-
-    $('.image-cover img').click(function () {
-        if ($window.width() > 768) {
-            var imgRef = this.getAttribute('src');
-            var imgTag = $preview.find('img');
-            imgTag.attr('src', imgRef);
-
-            if (imgTag[0].width < imgTag[0].height) {
-                imgTag.addClass('tall');
-                imgTag.removeClass('wide');
-            } else {
-                imgTag.removeClass('tall');
-                imgTag.addClass('wide');
+                (function (i) {
+                    setInterval(function () {
+                        //var style = styles[Math.floor(Math.random() * styles.length)];
+                        console.log(styles[i]);
+                        $home.css(styles[i].background);
+                        p.css(styles[i].fontColor);
+                        //if (i === 5) {
+                        //    i = 0;
+                        //}
+                    }, (i+1)*5000)
+                })(i);
             }
-
-            $preview.show();
         }
 
-    });
 
-    $preview.click(function () {
-        $preview.hide();
-    });
+        loopHome();
 
-}
+        $(window).resize(fullscreenFix);
+        fullscreenFix();
 
-function checkWindowSize() {
-    $(window).resize(function () {
-        imagePreview();
-    });
-};
-
-
-//parallax
-
-function runParallax() {
-
-    window.addEventListener("scroll", function (e) {
-        var top = this.pageYOffset;
-        var layers = document.getElementsByClassName("parallax");
-        var layer, speed, yPos;
-        for (var i = 0; i < layers.length; i++) {
-            layer = layers[i];
-            speed = layer.getAttribute('data-speed');
-            yPos = -(top * speed / 100);
-            layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+        /* resize background images */
+        function backgroundResize() {
+            var windowH = $(window).height();
+            $(".background").each(function (i) {
+                var path = $(this);
+                // variables
+                var contW = path.width();
+                var contH = path.height();
+                var imgW = path.attr("data-img-width");
+                var imgH = path.attr("data-img-height");
+                var ratio = imgW / imgH;
+                // overflowing difference
+                var diff = parseFloat(path.attr("data-diff"));
+                diff = diff ? diff : 0;
+                // remaining height to have fullscreen image only on parallax
+                var remainingH = 0;
+                if (path.hasClass("parallax")) {
+                    var maxH = contH > windowH ? contH : windowH;
+                    remainingH = windowH - contH;
+                }
+                // set img values depending on cont
+                imgH = contH + remainingH + diff;
+                imgW = imgH * ratio;
+                // fix when too large
+                if (contW > imgW) {
+                    imgW = contW;
+                    imgH = imgW / ratio;
+                }
+                //
+                path.data("resized-imgW", imgW);
+                path.data("resized-imgH", imgH);
+                path.css("background-size", imgW + "px " + imgH + "px");
+            });
         }
-    });
-}
+
+        $(window).resize(backgroundResize);
+        $(window).focus(backgroundResize);
+        backgroundResize();
 
 
-function initiateParallax() {
-    runParallax();
-}
+        function positionTopicsToSide() {
+            var $span = $('.topic');
+            //setTimeout(function(){
+            $span.addClass('middleware');
+            //});
 
 
-function dropDrape() {
-    $('.white-fade').fadeOut(1000, "linear");
-    setTimeout(function () {
-        $('.drape-wrapper').remove();
-    }, 500);
-};
+            setTimeout(function () {
+                $span.addClass('fixed-side');
+            });
+        }
 
-function initMasonry() {
+        function positionTopicsBack() {
+            var $span = $('.topic');
+            $span.removeClass('middleware');
 
-    var $container = $('.tabContent');
+            setTimeout(function () {
+                $span.removeClass('fixed-side');
+            });
+        }
 
-
-    $container.imagesLoaded(function () {
-        $container.masonry({
-            itemSelector: '.post-box',
-            columnWidth: '.post-box',
+        $(window).scroll(function () {
+            console.log('scrolling', window.pageYOffset);
+            if (window.pageYOffset > 400) {
+                positionTopicsToSide();
+            } else if (window.pageYOffset < 400) {
+                positionTopicsBack();
+            } else {
+                positionTopicsBack();
+            }
         });
-    });
+
+        window.window = window;
+
+        $('.link').on('click', function (e) {
+            e.preventDefault();
+            var hash = this.hash;
+            var $parent = $(this).parent();
+            positionTopicsToSide();
 
 
-}
+            //setTimeout(function(){
+            //    $parent.removeClass('fixed');
+            //    $parent.removeClass('middleware');
+            //}, 1000);
 
-var interval = setInterval(function () {
-    //$('html').css({'overflow': 'hidden'});
-    if (document.readyState === 'complete') {
-        setTimeout(function () {
-            console.log('complete');
-            dropDrape();
-            $('html').css({'overflow-y': 'scroll'});
-            clearInterval(interval);
-        }, 500);
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        });
+
 
     }
-    console.log('not complete');
-}, 100);
-
+);

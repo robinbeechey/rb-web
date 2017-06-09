@@ -4,234 +4,47 @@ title: Robin Beechey
 thumbnail: http://media.robinbeechey.com/rb_logo_og.png
 ---
 
-<div class="home">
-    <div class="white-fade"></div>
-
-
-    <main id="home-page">
-        <div id="main-contain">
-            <div id="preview" class="row">
-                <div class="col-sm-offset-3 col-sm-6 ">
-                    <img src=""/>
-                </div>
-
-            </div>
-            <div id="about-me">
-                <div class="row my-info">
-                    <div class="col-xs-12 col-sm-6 me">
-                        <img class="logo" src="http://media.robinbeechey.com/rb_logo1.png"/>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <p class="title"></p>
-                                <div class="links">
-                                    <a target="_blank" href="{{ site.linkedin }}"><span
-                                            class="fa fa-linkedin-square"></span></a>
-                                    <a target="_blank" href="{{ site.angel_list }}"><span
-                                            class="fa fa-angellist"></span></a>
-                                    <a target="_blank" href="{{ site.instagrams }}"><span class="fa fa-instagram"></span></a>
-                                    <a target="_top" href="mailto:robinbeechey@gmail.com"><span class="fa fa-envelope"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 skills">
-                        <div class="row">
-                            {% assign frontEnd = site.data.skills.skills | where: "type", "front" %}
-                            {% assign back = site.data.skills.skills | where: "type", "back" %}
-                            {% assign design = site.data.skills.skills | where: "type", "design" %}
-
-                            <div class="col-xs-12 category">
-                                <h5>Front End</h5>
-                            </div>
-                            <div class="col-xs-12 skill-icons">
-                                <div class="row">
-                                    {% for skill in frontEnd %}
-                                    <div class="col-xs-3 col-sm-2 icon-col">
-                                        <div class="icon-cover">
-                                            <img class="icon" src="{{ skill.src }}"/>
-
-                                            <div class="skill-info">
-                                                <p class="name">{{ skill.name }}</p>
-                                                {% for star in (1..skill.rating) %}
-                                                <p class="rating-star fa fa-star"></p>
-                                                {% endfor %}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12 category">
-                                <h5>Back End/Services</h5>
-                            </div>
-
-                            <div class="col-xs-12 skill-icons">
-                                <div class="row">
-                                    {% for skill in back %}
-                                    <div class="col-xs-3 col-sm-2 icon-col">
-                                        <div class="icon-cover">
-                                            <img class="icon" src="{{ skill.src }}"/>
-                                            <div class="skill-info">
-                                                <p class="name">{{ skill.name }}</p>
-                                                {% for star in (1..skill.rating) %}
-                                                <p class="rating-star fa fa-star"></p>
-                                                {% endfor %}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-
-
-                            <div class="col-xs-12 category">
-                                <h5>Design/Misc</h5>
-                            </div>
-
-                            <div class="col-xs-12 skill-icons">
-                                <div class="row">
-                                    {% for skill in design %}
-                                    <div class="col-xs-3 col-sm-2 icon-col">
-                                        <div class="icon-cover">
-                                            <img class="icon" src="{{ skill.src }}"/>
-                                            <div class="skill-info">
-                                                <p class="name">{{ skill.name }}</p>
-                                                {% for star in (1..skill.rating) %}
-                                                <p class="rating-star fa fa-star"></p>
-                                                {% endfor %}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="portfolio">
-
-                {% assign web = site.projects | where: "category", "web" | sort: 'date' %}
-                {% assign graphics = site.projects | where: "category", "graphics" | sort: 'date' %}
-                {% assign film = site.projects | where: "category", "film" | sort: 'date' %}
-                {% assign misc = site.projects | where: "category", "misc" | sort: 'date' %}
-
-                <div id="tabs" class="row">
-                    <div class="col-xs-3"><a href="#web">Web</a></div>
-                    <div class="col-xs-3"><a href="#graphics">Graphics</a></div>
-                    <div class="col-xs-3"><a href="#film">Film</a></div>
-                    <div class="col-xs-3"><a href="#misc">Misc</a></div>
-                </div>
-
-                <div class="tabContent row web" id="web">
-                    {% for project in web %}
-                    <div class="post-box col-xs-12 col-sm-4">
-                        <div class="project">
-                            <div class="image-cover">
-                                <img src="{{project.image}}"/>
-                                <span class="hidden-xs fa fa-picture-o"></span>
-                            </div>
-                            <div class="info">
-                                <p class="title">{{ project.title }}</p>
-                                <p class="description">{{project.description}}</p>
-                                <ul>
-                                    <li><p><a target="_blank" href="{{project.siteUrl}}"><span
-                                            class="fa fa-external-link"></span> {{project.siteUrl | remove: 'http://'}}</a></p>
-                                    </li>
-                                    <li><p><span class="fa fa-wrench"></span> {{project.tools}}</p></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                    {% endfor %}
-                </div>
-
-                <div class="tabContent row graphics" id="graphics">
-                    {% for project in graphics reversed %}
-
-                    <div class="post-box col-xs-6 col-sm-4">
-                        <div class="project">
-                            <div class="image-cover">
-                                <img src="{{project.image}}"/>
-                                <span class="hidden-xs fa fa-picture-o"></span>
-                            </div>
-                            <div class="info">
-                                <p class="title">{{ project.title }}</p>
-                                <p class="description">{{project.description}}</p>
-                                <ul>
-                                    <!--<li><p><a target="_blank" href="{{project.siteUrl}}"><i-->
-                                    <!--class="fa fa-external-link"></i> {{project.siteUrl}}</a></p>-->
-                                    <!--</li>-->
-                                    <li><p><i class="fa fa-wrench"></i> {{project.tools}}</p></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    {% endfor %}
-                </div>
-
-                <div class="tabContent row film" id="film">
-                    {% for project in film reversed %}
-
-                    <div class="post-box col-xs-12 col-sm-6">
-                        <div class="project">
-                            <div class="image-cover">
-                                {{project.iframe}}
-                            </div>
-                            <div class="info">
-                                <p class="title">{{ project.title }}</p>
-                                <p class="description">{{project.description}}</p>
-                                <ul>
-                                    {% if project.musicSource != nil %}
-                                    <li><p><a target="_blank" href="{{project.musicSource}}"><i
-                                            class="fa fa-external-link"></i> Music By
-                                        {{project.musicSource | remove: 'http://' | remove: 'https://' }}</a></p>
-                                    </li>
-                                    {% endif %}
-                                    <li><p><i class="fa fa-wrench"></i> {{project.tools}}</p></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    {% endfor %}
-                </div>
-
-                <div class="tabContent row misc" id="misc">
-                    {% for project in misc reversed %}
-
-                    <div class="post-box col-xs-12 col-sm-4">
-                        <div class="project">
-                            <div class="image-cover">
-                                <img src="{{project.image}}"/>
-                                <span class="hidden-xs fa fa-picture-o"></span>
-                            </div>
-                            <div class="info">
-                                <p class="title">{{ project.title }}</p>
-                                <p class="description">{{project.description}}</p>
-                                <ul>
-                                    <li><p><i class="fa fa-wrench"></i> {{project.tools}}</p></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                    {% endfor %}
-                </div>
-
-
-            </div>
-
+<section id="home" class="fullscreen">
+    <div class="content-a">
+        <div class="content-b">
+            <p class="me">Hi, my name is <span class="topic robin"><a href="#robin-sec" class="link">Robin Beechey</a></span> and I like to <span class="topic design"><a
+                    href="#design-sec" class="link">Design</a></span>, <span class="topic develop"><a
+                    href="#develop-sec" class="link">Develop</a></span> and other <span
+                    class="topic stuff"><a href="#stuff-sec" class="link" >stuff</a></span></p>
         </div>
+    </div>
+</section>
 
-    </main>
-    <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
+<section id="robin-sec" class="fullscreen">
+    <div class="content-a">
+        <div class="content-b">
+            <p class="me">Me</p>
+        </div>
+    </div>
+</section>
 
-</div>
+
+<section id="design-sec" class="fullscreen">
+    <div class="content-a">
+        <div class="content-b">
+            <p class="me">Design stuff</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="develop-sec" class="fullscreen">
+    <div class="content-a">
+        <div class="content-b">
+            <p class="me">Develop stuff</p>
+        </div>
+    </div>
+</section>
+
+<section id="stuff-sec" class="fullscreen">
+    <div class="content-a">
+        <div class="content-b">
+            <p class="me">Stuff stuff</p>
+        </div>
+    </div>
+</section>
