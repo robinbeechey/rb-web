@@ -4,14 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta property="og:image" content="{% if page.thumbnail %}{{ page.thumbnail }}{% endif %}">
+  <meta property="og:image" content="https://media.robinbeechey.com/my_site/RB_LOGO_MAGIC_BLUE.png">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <link rel="icon" type="image/png" href="/img/favicon.ico" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.ico" />
   <link rel="stylesheet" href="{{ "/font-awesome-4.5.0/css/font-awesome.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/animate.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <!--<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">-->
+  <!--<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">-->
 </head>
