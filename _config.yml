@@ -24,6 +24,7 @@ mediaBucket: "http://media.robinbeechey.com/"
 
 # Conversion
 markdown: kramdown
+incremental: true
 
 # Handling Reading
 include:
