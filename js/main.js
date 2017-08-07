@@ -1,32 +1,4 @@
-function init() {
-    //easel dev
-
-    //var stage = new createjs.Stage("demoCanvas");
-    //var circle = new createjs.Shape();
-    //circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
-    //circle.x = 100;
-    //circle.y = 100;
-    //stage.addChild(circle);
-    //stage.update();
-    //
-    ////Update stage will render next frame
-    //createjs.Ticker.addEventListener("tick", handleTick);
-    //
-    //function handleTick() {
-    //    //Circle will move 10 units to the right.
-    //    circle.x += 10;
-    //    //Will cause the circle to wrap back
-    //    if (circle.x > stage.canvas.width) {
-    //        circle.x = 0;
-    //    }
-    //    stage.update();
-    //}
-
-};
-
 $(document).ready(function () {
-
-
 
         /* fix vertical when not overflow
          call fullscreenFix() if .fullscreen content changes */
@@ -44,51 +16,100 @@ $(document).ready(function () {
             var styles = [
                 {
                     background: {
+                        'background-color': '#7DE0E6',
+                        'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)',
+                    },
+                    aColor: {color: '#FF2A93'},
+                    pColor: {color: 'white'},
+                    logoColor: {fill: '#FF2A93'}
+                },
+                {
+                    background: {
                         'background-color': '#B7E3E4',
                         'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)',
                     },
-                    fontColor: {color: '#F03F35'}
+                    aColor: {color: '#F03F35'},
+                    pColor: {color: '#2d2d2d'},
+                    logoColor: {fill: '#F03F35'}
                 },
                 {
                     background: {
                         'background-color': '#F0CF61',
                         'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)',
                     },
-                    fontColor: {color: 'white'}
+                    aColor: {color: 'white'},
+                    pColor: {color: '#2d2d2d'},
+                    logoColor: {fill: 'white'}
                 },
                 {
                     background: {
-                        'background-color': '#FFEFE5',
+                        'background-color': '#FF8B8B',
                         'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)',
                     },
-                    fontColor: {color: '#1FC8A9'}
+                    aColor: {color: '#CFFFFF'},
+                    pColor: {color: 'white'},
+                    logoColor: {fill: '#CFFFFF'}
+                },
+                {
+                    background: {
+                        'background-color': '#1B1D1C',
+                        'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)',
+                    },
+                    aColor: {color: '#EA1821'},
+                    pColor: {color: 'white'},
+                    logoColor: {fill: '#EA1821'}
                 },
                 {
                     background: {
                         'background-color': '#19AAD1',
                         'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)',
                     },
-                    fontColor: {color: '#FFCC4C'}
+                    aColor: {color: '#FFCC4C'},
+                    pColor: {color: 'white'},
+                    logoColor: {fill: '#FFCC4C'}
                 },
                 {
                     background: {
-                        'background-color': '#F4C7EE',
+                        'background-color': 'white',
                         'transition': 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1)',
                     },
-                    fontColor: {color: '#008FD3'}
-                },
+                    aColor: {color: '#19AAD1'},
+                    pColor: {color: '#2d2d2d'},
+                    logoColor: {fill: '#19AAD1'}
+                }
+
             ];
+            var a = $home.find('a');
             var p = $home.find('p');
+            var logo = $home.find('.rb-logo');
 
             var count = 0;
 
-            setInterval(function () {
+            function doSomething() {
                 count === styles.length ? count = 0 : null;
                 $home.css(styles[count].background);
-                p.css(styles[count].fontColor);
-                //console.log('cool', count, styles[count].background);
+                a.css(styles[count].aColor);
+                p.css(styles[count].pColor);
+                logo.css(styles[count].logoColor);
+
                 count++;
-            }, 3000);
+            }
+
+            doSomething();
+
+            setInterval(doSomething, 3000);
+
+            //setInterval(function () {
+            //    count === styles.length ? count = 0 : null;
+            //    $home.css(styles[count].background);
+            //    a.css(styles[count].aColor);
+            //    p.css(styles[count].pColor);
+            //    logo.css(styles[count].logoColor);
+            //
+            //    count++;
+            //}, 3000);
+
+
         }
 
 
@@ -118,7 +139,6 @@ $(document).ready(function () {
         }
 
         $(window).scroll(function () {
-            console.log('scrolling');
             if (window.pageYOffset > 400) {
                 positionTopicsToSide();
             } else if (window.pageYOffset < 400) {
